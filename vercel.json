@@ -1,0 +1,24 @@
+{
+  "buildCommand": "prisma generate && prisma migrate deploy && next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "NEXTAUTH_URL": "@nextauth_url",
+    "NEXTAUTH_SECRET": "@nextauth_secret",
+    "GOOGLE_CLIENT_ID": "@google_client_id",
+    "GOOGLE_CLIENT_SECRET": "@google_client_secret",
+    "GITHUB_ID": "@github_id",
+    "GITHUB_SECRET": "@github_secret",
+    "NEXT_PUBLIC_BASE_URL": "@base_url"
+  },
+  "regions": ["iad1"],
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}

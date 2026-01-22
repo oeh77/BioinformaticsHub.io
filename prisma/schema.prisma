@@ -1,0 +1,296 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  role          String    @default("USER") // ADMIN, EDITOR, USER
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  bookmarks     Bookmark[]
+  paymentMethods PaymentMethod[]
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  type        String   @default("TOOL") // TOOL, COURSE, POST
+  tools       Tool[]
+  courses     Course[]
+  posts       Post[]
+  resources   Resource[]
+}
+
+model Tool {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String
+  content     String?
+  url         String?
+  pricing     String?
+  image       String?
+  published   Boolean  @default(true)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  
+  metaTitle   String?
+  metaDesc    String?
+}
+
+model Course {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  provider    String
+  level       String
+  description String
+  url         String?
+  image       String?
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+}
+
+model Resource {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  type        String
+  description String
+  url         String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  categoryId  String?
+  category    Category? @relation(fields: [categoryId], references: [id])
+}
+
+model Post {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String?
+  content     String
+  image       String?
+  published   Boolean  @default(false)
+  authorId    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  
+  metaTitle   String?
+  metaDesc    String?
+}
+
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  status    String   @default("SUBSCRIBED")
+  createdAt DateTime @default(now())
+}
+
+model Settings {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  encrypted Boolean  @default(false)
+}
+
+model Bookmark {
+  id        String   @id @default(cuid())
+  userId    String
+  itemType  String   // TOOL, COURSE, RESOURCE
+  itemId    String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, itemType, itemId])
+  @@index([userId])
+}
+
+model Integration {
+  id          String   @id @default(cuid())
+  name        String
+  provider    String   // twitter, linkedin, facebook, zapier, slack, salesforce, custom
+  category    String   // social, automation, erp, other
+  description String?
+  image       String?
+  isConnected Boolean  @default(false)
+  
+  // Storing config as a JSON string since shapes vary heavily by provider
+  // e.g. { clientId, clientSecret, webhookUrl, apiKey, ... }
+  config      String   @default("{}") 
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ApiKey {
+  id                String         @id @default(cuid())
+  name              String
+  description       String?
+  key               String         @unique  // Public API key (e.g., "bhio_live_abc123...")
+  secretHash        String         // Hashed secret key (bcrypt)
+  userId            String
+  
+  // Permissions/scopes
+  scopes            String         @default("[]")  // JSON array: ["tools:read", "courses:read", "tools:write", etc.]
+  
+  // Rate limiting
+  requestsPerHour   Int            @default(1000)
+  requestsPerDay    Int            @default(10000)
+  
+  // IP whitelist (comma-separated IPs or CIDR ranges)
+  ipWhitelist       String?
+  
+  // Status
+  isActive          Boolean        @default(true)
+  expiresAt         DateTime?
+  lastUsedAt        DateTime?
+  
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  
+  usage             ApiKeyUsage[]
+  
+  @@index([userId])
+  @@index([key])
+}
+
+model ApiKeyUsage {
+  id          String   @id @default(cuid())
+  apiKeyId    String
+  apiKey      ApiKey   @relation(fields: [apiKeyId], references: [id], onDelete: Cascade)
+  
+  endpoint    String   // e.g., "/api/v1/tools"
+  method      String   // GET, POST, PUT, DELETE
+  statusCode  Int      // HTTP status code
+  ipAddress   String
+  userAgent   String?
+  
+  timestamp   DateTime @default(now())
+  
+  @@index([apiKeyId])
+  @@index([timestamp])
+}
+
+model Webhook {
+  id          String            @id @default(cuid())
+  name        String
+  description String?
+  url         String            // Webhook endpoint URL
+  secret      String            // Secret for HMAC signature verification
+  
+  // Events to subscribe to (JSON array)
+  // e.g., ["tool.created", "tool.updated", "course.created", etc.]
+  events      String            @default("[]")
+  
+  isActive    Boolean           @default(true)
+  userId      String
+  
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  
+  deliveries  WebhookDelivery[]
+  
+  @@index([userId])
+}
+
+model WebhookDelivery {
+  id           String   @id @default(cuid())
+  webhookId    String
+  webhook      Webhook  @relation(fields: [webhookId], references: [id], onDelete: Cascade)
+  
+  event        String   // e.g., "tool.created"
+  payload      String   // JSON payload sent
+  
+  statusCode   Int?     // HTTP response status code
+  response     String?  // Response body (if any)
+  error        String?  // Error message if failed
+  
+  attemptCount Int      @default(1)
+  succeeded    Boolean  @default(false)
+  
+  deliveredAt  DateTime @default(now())
+  
+  @@index([webhookId])
+  @@index([deliveredAt])
+}
+
+model PaymentMethod {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  provider    String   // e.g., "stripe"
+  providerId  String   // e.g., Stripe customer ID or payment method ID
+  last4       String?  // last 4 digits for display
+  brand       String?  // Visa, MasterCard, etc.
+  expMonth    Int?
+  expYear     Int?
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+}

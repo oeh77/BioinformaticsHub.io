@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-pulse-slow: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-blob: blob 7s infinite;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  /* HSL Modern & Accessible Palette */
+  --background: 210 40% 98%; /* Soft cool white */
+  --foreground: 222 47% 11%; /* Deep navy text for accessible high contrast */
+  
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  
+  --primary: 221 83% 53%; /* Vivid Blue (WCAG AA compliant on light bg) */
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222 47% 11%;
+  
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215 25% 40%; /* Darker muted text for readability */
+  
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222 47% 11%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221 83% 53%;
+  
+  --radius: 1rem; /* More modern, softer corners */
+}
+
+.dark {
+  --background: 230 35% 7%; /* Deep midnight/void */
+  --foreground: 210 40% 98%; /* High contrast light text */
+  
+  --card: 230 35% 7%;
+  --card-foreground: 210 40% 98%;
+  
+  --popover: 230 35% 7%;
+  --popover-foreground: 210 40% 98%;
+  
+  --primary: 217 91% 60%; /* Bright Electric Blue for dark mode visibility */
+  --primary-foreground: 222 47.4% 11.2%;
+  
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 75%; /* Lighter muted text for better contrast */
+  
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 217 91% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* Rich dynamic background with noise texture for organic feel */
+    background-color: hsl(var(--background));
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(var(--primary) / 0.1) 0px, transparent 50%), 
+        radial-gradient(at 100% 0%, hsla(var(--primary) / 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(280, 80%, 65%, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+  
+  /* Focus styling for keyboard accessibility */
+  :focus-visible {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background outline-hidden;
+  }
+}
+
+/* Premium Glass Utilities */
+@utility glass {
+  @apply backdrop-blur-xl bg-white/70 dark:bg-[#0a0f1d]/60 border border-white/20 dark:border-white/5 shadow-lg shadow-black/5 dark:shadow-black/20;
+}
+
+@utility glass-card {
+  @apply glass rounded-2xl transition-all duration-300 hover:shadow-xl hover:bg-white/80 dark:hover:bg-[#0a0f1d]/70 hover:border-primary/20 hover:-translate-y-1;
+}
+
+@utility glass-shine {
+  @apply relative overflow-hidden after:absolute after:inset-0 after:-translate-x-full after:animate-[shine_3s_infinite] after:bg-gradient-to-r after:from-transparent after:via-white/10 after:to-transparent;
+}
+
+@utility subheading {
+    @apply text-muted-foreground text-sm font-medium tracking-wide uppercase;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40 transition-colors;
 }

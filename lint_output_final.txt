@@ -1,0 +1,137 @@
+
+> bioinformatics-hub-io@0.1.0 lint
+> eslint
+
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\content\page.tsx
+  1:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\integrations\page.tsx
+  277:50  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\posts\[id]\preview\page.tsx
+   4:21  warning  'ExternalLink' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  92:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\subscribers\page.tsx
+  2:41  warning  'Download' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Button' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\tools\[id]\preview\page.tsx
+  104:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\users\page.tsx
+  100:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\blog\page.tsx
+    3:28  warning  'UserIcon' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   47:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  124:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\compare\[id]\page.tsx
+  446:44  warning  'id' is defined but never used                                   @typescript-eslint/no-unused-vars
+  524:26  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  532:56  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  532:65  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\compare\page.tsx
+  3:60  warning  'Users' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\courses\page.tsx
+    4:54  warning  'Database' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  225:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\[category]\page.tsx
+  232:130  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  232:149  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\page.tsx
+    5:28  warning  'getCategoryImage' is defined but never used                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   83:26  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  224:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\tools\page.tsx
+  4:18  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\profile\page.tsx
+  88:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\[slug]\page.tsx
+  16:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\page.tsx
+    4:20  warning  'Download' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    9:37  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  211:17  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  212:23  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  277:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\advanced-export-button.tsx
+  70:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\export-button.tsx
+  53:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\schedule-publish.tsx
+  40:6  warning  React Hook useEffect has missing dependencies: 'onPublishedAtChange' and 'onPublishedChange'. Either include them or remove the dependency array. If 'onPublishedChange' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\bookmark-button.tsx
+  36:6  warning  React Hook useEffect has a missing dependency: 'checkBookmarkStatus'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\filter-bar.tsx
+  4:20  warning  'useEffect' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\about-bioinformatics.tsx
+   12:39  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+   25:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  130:31  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  141:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\featured-tools.tsx
+  21:54  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\getting-started-section.tsx
+   79:22  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  148:95  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\hero-section.tsx
+  68:67  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\newsletter-section.tsx
+  50:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\layout\footer.tsx
+  30:97  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\layout\mega-menu.tsx
+  121:19  error  Do not use an `<a>` element to navigate to `/directory/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\user-menu.tsx
+  66:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\hooks\use-toast.ts
+  19:7  warning  'actionTypes' is assigned a value but only used as a type  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\cache.ts
+  15:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  69:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  69:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\manual-tests.ts
+  118:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\test-utils.ts
+  37:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  37:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\scripts\test-runner.js
+   17:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  165:33  warning  '_' is defined but never used      @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\types\next-auth.d.ts
+  2:10  warning  'JWT' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 60 problems (28 errors, 32 warnings)
+
