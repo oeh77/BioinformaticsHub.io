@@ -1,0 +1,137 @@
+{
+  "name": "BioinformaticsHub",
+  "short_name": "BioHub",
+  "description": "The premier directory for bioinformatics tools, courses, and resources. Discover, compare, and learn with the best tools in computational biology.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Home Page - Discover Bioinformatics Tools"
+    },
+    {
+      "src": "/screenshots/directory.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tool Directory - Browse and Compare"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile Home Page"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Tools",
+      "short_name": "Tools",
+      "description": "Browse the bioinformatics tool directory",
+      "url": "/directory",
+      "icons": [{ "src": "/icons/tools-shortcut.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Courses",
+      "short_name": "Learn",
+      "description": "Explore bioinformatics courses",
+      "url": "/courses",
+      "icons": [{ "src": "/icons/courses-shortcut.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Community",
+      "short_name": "Q&A",
+      "description": "Ask questions and get help",
+      "url": "/community",
+      "icons": [{ "src": "/icons/community-shortcut.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Workflow Builder",
+      "short_name": "Workflows",
+      "description": "Build bioinformatics pipelines",
+      "url": "/workflows",
+      "icons": [{ "src": "/icons/workflows-shortcut.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "handle_links": "preferred",
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

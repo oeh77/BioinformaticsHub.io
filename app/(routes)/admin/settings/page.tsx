@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Save, Loader2, Globe, Mail, Shield, Database } from "lucide-react";
+import { Save, Loader2, Globe, Mail, Shield, Database, Sparkles } from "lucide-react";
 
 interface Settings {
   siteName: string;
@@ -289,6 +289,37 @@ export default function AdminSettingsPage() {
         </p>
       </div>
 
+       {/* Stripe Configuration */}
+       <div className="glass-card p-6 space-y-4">
+        <div className="flex items-center gap-2 mb-4">
+          <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#635BFF]" fill="currentColor">
+            <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.915 0-1.172 1.14-1.613 2.527-1.613 1.237 0 2.753.506 3.904 1.28l1.086-2.58C16.892 2.65 15.42 2.124 13.148 2.124c-3.215 0-5.753 1.742-5.753 4.796 0 2.785 2.161 3.86 4.881 4.817 2.259.807 2.829 1.527 2.829 2.58 0 1.26-1.216 1.774-2.829 1.774-1.699 0-3.699-.742-5.054-1.74l-1.183 2.66c1.72 1.074 3.731 1.624 5.925 1.624 3.516 0 6.075-1.742 6.075-5.118 0-2.731-2.097-3.968-4.064-4.366z"/>
+          </svg>
+          <h2 className="font-semibold text-lg">Payment Gateway (Stripe)</h2>
+        </div>
+        
+        <div className="space-y-4">
+           <div className="p-4 rounded-lg bg-[#635BFF]/10 border border-[#635BFF]/20">
+             <div className="flex justify-between items-center">
+                <div>
+                   <h3 className="font-medium text-[#635BFF]">Stripe Integration Active</h3>
+                   <p className="text-sm text-muted-foreground mt-1">
+                     Stripe keys are configured via environment variables.
+                   </p>
+                </div>
+                <div className="flex gap-2">
+                  <div className="px-3 py-1 bg-green-500/10 text-green-500 text-xs rounded-full border border-green-500/20">
+                    Publishable Key Set
+                  </div>
+                  <div className="px-3 py-1 bg-green-500/10 text-green-500 text-xs rounded-full border border-green-500/20">
+                    Secret Key Set
+                  </div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </div>
+
       {/* System Settings */}
       <div className="glass-card p-6 space-y-4">
         <div className="flex items-center gap-2 mb-4">
@@ -315,6 +346,33 @@ export default function AdminSettingsPage() {
             </label>
           </div>
         </div>
+      </div>
+
+      {/* Auto-Blog Settings */}
+      <div className="glass-card p-6 space-y-4">
+        <div className="flex items-center gap-2 mb-4">
+          <Sparkles className="w-5 h-5 text-primary" />
+          <h2 className="font-semibold text-lg">Auto-Blog Automation</h2>
+        </div>
+        
+        <div className="flex items-center justify-between p-4 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+          <div>
+            <p className="font-medium text-purple-400">AI-Powered Blog Generation</p>
+            <p className="text-sm text-muted-foreground">
+              Automatically generate blog posts for all 25 bioinformatics categories every 24 hours
+            </p>
+          </div>
+          <a 
+            href="/admin/autoblog"
+            className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg text-sm font-medium transition-all"
+          >
+            Configure Auto-Blog
+          </a>
+        </div>
+        
+        <p className="text-xs text-muted-foreground">
+          Configure scheduling, auto-publish settings, and monitor generation jobs from the dedicated Auto-Blog page.
+        </p>
       </div>
 
       {/* Database Info */}

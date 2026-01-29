@@ -123,6 +123,10 @@ export default function WebhooksPage() {
     );
   }
 
+// Refactored WebhooksPage
+  
+  const inputClasses = "w-full px-3 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-foreground placeholder:text-muted-foreground";
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -135,7 +139,7 @@ export default function WebhooksPage() {
             Send real-time notifications to external systems when events occur
           </p>
         </div>
-        <Button onClick={() => setShowCreateDialog(true)} className="gap-2">
+        <Button onClick={() => setShowCreateDialog(true)} className="gap-2 shadow-sm text-primary-foreground">
           <Plus className="w-4 h-4" />
           Create Webhook
         </Button>
@@ -144,20 +148,20 @@ export default function WebhooksPage() {
       {/* Webhooks List */}
       <div className="grid gap-4">
         {webhooks.length === 0 ? (
-          <div className="text-center py-12 glass-effect rounded-lg">
+          <div className="text-center py-12 bg-card border border-border rounded-lg shadow-sm">
             <WebhookIcon className="w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-50" />
             <h3 className="text-lg font-semibold mb-2">No Webhooks</h3>
             <p className="text-muted-foreground mb-4">
               Create your first webhook to receive real-time event notifications
             </p>
-            <Button onClick={() => setShowCreateDialog(true)} className="gap-2">
+            <Button onClick={() => setShowCreateDialog(true)} className="gap-2 shadow-sm text-primary-foreground">
               <Plus className="w-4 h-4" />
               Create Webhook
             </Button>
           </div>
         ) : (
           webhooks.map((webhook) => (
-            <div key={webhook.id} className="glass-effect rounded-lg p-6 space-y-4">
+            <div key={webhook.id} className="bg-card border border-border rounded-lg p-6 space-y-4 shadow-sm">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
@@ -165,8 +169,8 @@ export default function WebhooksPage() {
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1 ${
                         webhook.isActive
-                          ? "bg-green-500/20 text-green-400"
-                          : "bg-red-500/20 text-red-400"
+                          ? "bg-green-500/20 text-green-600 dark:text-green-400"
+                          : "bg-red-500/20 text-red-600 dark:text-red-400"
                       }`}
                     >
                       {webhook.isActive ? (
@@ -189,7 +193,7 @@ export default function WebhooksPage() {
                   )}
 
                   {/* Webhook URL */}
-                  <div className="mb-3 font-mono text-sm bg-black/20 p-3 rounded break-all">
+                  <div className="mb-3 font-mono text-sm bg-muted p-3 rounded break-all border border-border">
                     {webhook.url}
                   </div>
 
@@ -336,9 +340,11 @@ function CreateWebhookDialog({
     }
   };
 
+  const inputClasses = "w-full px-3 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-foreground placeholder:text-muted-foreground";
+
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="glass-effect rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6">
+      <div className="bg-card text-card-foreground border border-border rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 shadow-xl">
         <h2 className="text-2xl font-bold mb-4">Create Webhook</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -349,7 +355,7 @@ function CreateWebhookDialog({
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-3 py-2 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              className={inputClasses}
               placeholder="Production Webhook"
             />
           </div>
@@ -359,7 +365,7 @@ function CreateWebhookDialog({
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full px-3 py-2 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              className={inputClasses}
               placeholder="Sends notifications to our CRM..."
               rows={2}
             />
@@ -372,7 +378,7 @@ function CreateWebhookDialog({
               required
               value={url}
               onChange={(e) => setUrl(e.target.value)}
-              className="w-full px-3 py-2 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              className={inputClasses}
               placeholder="https://example.com/webhook"
             />
           </div>
@@ -383,13 +389,13 @@ function CreateWebhookDialog({
               {availableEvents.map((event) => (
                 <label
                   key={event.value}
-                  className="flex items-center gap-2 p-2 rounded hover:bg-white/5 cursor-pointer"
+                  className="flex items-center gap-2 p-2 rounded hover:bg-muted/50 cursor-pointer border border-transparent hover:border-border transition-colors"
                 >
                   <input
                     type="checkbox"
                     checked={events.includes(event.value)}
                     onChange={() => toggleEvent(event.value)}
-                    className="rounded"
+                    className="rounded border-input text-primary focus:ring-primary"
                   />
                   <span className="text-sm">{event.label}</span>
                 </label>
@@ -398,7 +404,7 @@ function CreateWebhookDialog({
           </div>
 
           <div className="flex gap-2 pt-4">
-            <Button type="submit" disabled={submitting} className="flex-1">
+            <Button type="submit" disabled={submitting} className="flex-1 text-primary-foreground shadow-sm">
               {submitting ? "Creating..." : "Create Webhook"}
             </Button>
             <Button type="button" variant="outline" onClick={onClose}>

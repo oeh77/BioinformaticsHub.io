@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import { Users, Shield, User, UserCog } from "lucide-react";
 import { RoleSelector } from "@/components/admin/role-selector";
 
+import { CreateUserDialog } from "@/components/admin/create-user-dialog";
+
 export const dynamic = 'force-dynamic';
 
 export default async function AdminUsersPage() {
@@ -26,9 +28,12 @@ export default async function AdminUsersPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold">Users & Roles</h1>
-        <p className="text-muted-foreground mt-1">Manage user accounts and permissions</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">Users & Roles</h1>
+          <p className="text-muted-foreground mt-1">Manage user accounts and permissions</p>
+        </div>
+        <CreateUserDialog />
       </div>
 
       {/* Stats */}

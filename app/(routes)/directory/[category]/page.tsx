@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { ArrowLeft, ArrowRight, Star, Wrench } from "lucide-react";
@@ -6,9 +7,10 @@ import { Button } from "@/components/ui/button";
 import { getCategoryStyle, getCategoryImage } from "@/lib/utils";
 import { PageHeader } from "@/components/ui/page-header";
 import { Prisma } from "@prisma/client";
+import { CategoryFilters } from "./_components/category-filters";
 
-// Force dynamic rendering
-export const dynamic = 'force-dynamic';
+// Revalidate every hour
+export const revalidate = 3600;
 
 interface Props {
   params: Promise<{ category: string }>;
@@ -77,30 +79,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const style = getCategoryStyle(category.slug);
   const bgImage = getCategoryImage(category.slug);
 
-  const sortOptions = [
-    { value: "newest", label: "Newest First" },
-    { value: "oldest", label: "Oldest First" },
-    { value: "name-asc", label: "Name (A-Z)" },
-    { value: "name-desc", label: "Name (Z-A)" },
-    { value: "featured", label: "Featured First" },
-  ];
-
-  const pricingOptions = [
-    { value: "", label: "All Pricing" },
-    { value: "free", label: "Free" },
-    { value: "freemium", label: "Freemium" },
-    { value: "paid", label: "Paid" },
-  ];
-
-  const buildUrl = (updates: Record<string, string>) => {
-    const params = new URLSearchParams();
-    if (updates.sort && updates.sort !== "newest") params.set("sort", updates.sort);
-    if (updates.pricing) params.set("pricing", updates.pricing);
-    if (updates.q) params.set("q", updates.q);
-    const queryString = params.toString();
-    return queryString ? `?${queryString}` : "";
-  };
-
   return (
     <>
       <PageHeader 
@@ -129,72 +107,12 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                     </div>
 
                     {/* Filter Controls */}
-                    <div className="flex flex-wrap gap-4 mb-6 p-4 glass rounded-xl">
-                        {/* Search */}
-                        <form action="" method="GET" className="flex-1 min-w-[200px]">
-                            <input
-                                type="text"
-                                name="q"
-                                defaultValue={search}
-                                placeholder="Search tools..."
-                                className="w-full px-4 py-2 rounded-lg glass border border-white/10 focus:border-primary outline-none text-sm"
-                            />
-                            <input type="hidden" name="sort" value={sort} />
-                            <input type="hidden" name="pricing" value={pricing} />
-                        </form>
-
-                        {/* Sort */}
-                        <div className="flex items-center gap-2">
-                            <label htmlFor="sort-select" className="text-sm text-muted-foreground">Sort:</label>
-                            <select
-                                id="sort-select"
-                                title="Sort tools"
-                                defaultValue={sort}
-                                onChange={(e) => {
-                                    const url = buildUrl({ sort: e.target.value, pricing, q: search });
-                                    window.location.href = `/directory/${categorySlug}${url}`;
-                                }}
-                                className="px-3 py-2 rounded-lg glass border border-white/10 focus:border-primary outline-none text-sm cursor-pointer"
-                            >
-                                {sortOptions.map((option) => (
-                                    <option key={option.value} value={option.value}>
-                                        {option.label}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        {/* Pricing Filter */}
-                        <div className="flex items-center gap-2">
-                            <label htmlFor="pricing-select" className="text-sm text-muted-foreground">Pricing:</label>
-                            <select
-                                id="pricing-select"
-                                title="Filter by pricing"
-                                defaultValue={pricing}
-                                onChange={(e) => {
-                                    const url = buildUrl({ sort, pricing: e.target.value, q: search });
-                                    window.location.href = `/directory/${categorySlug}${url}`;
-                                }}
-                                className="px-3 py-2 rounded-lg glass border border-white/10 focus:border-primary outline-none text-sm cursor-pointer"
-                            >
-                                {pricingOptions.map((option) => (
-                                    <option key={option.value} value={option.value}>
-                                        {option.label}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        {/* Clear Filters */}
-                        {(search || pricing || sort !== "newest") && (
-                            <Link 
-                                href={`/directory/${categorySlug}`}
-                                className="text-sm text-red-500 hover:text-red-400 flex items-center"
-                            >
-                                Clear Filters
-                            </Link>
-                        )}
-                    </div>
+                    <CategoryFilters 
+                        initialSearch={search}
+                        initialSort={sort}
+                        initialPricing={pricing}
+                        categorySlug={categorySlug}
+                    />
                     
                     {tools.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -225,11 +143,21 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                                                 )}
                                             </div>
                                         </div>
-                                        <div className={`w-10 h-10 rounded-lg ${style.bg} flex items-center justify-center text-lg font-bold ${style.text} group-hover:scale-110 transition-transform`}>
-                                            {tool.name[0]}
+                                        <div className={`w-10 h-10 relative rounded-lg overflow-hidden ${!tool.image ? style.bg : ''} flex items-center justify-center text-lg font-bold ${style.text} group-hover:scale-110 transition-transform shrink-0`}>
+                                            {tool.image ? (
+                                                <Image 
+                                                    src={tool.image} 
+                                                    alt={`${tool.name} icon`}
+                                                    fill
+                                                    className="object-cover"
+                                                    sizes="40px"
+                                                />
+                                            ) : (
+                                                tool.name[0]
+                                            )}
                                         </div>
                                     </div>
-                                    <p className="text-sm text-muted-foreground mb-6 line-clamp-3 leading-relaxed flex-1 italic">"{tool.description}"</p>
+                                    <p className="text-sm text-muted-foreground mb-6 line-clamp-3 leading-relaxed flex-1 italic">&quot;{tool.description}&quot;</p>
                                     <div className="mt-auto pt-4 border-t border-white/5">
                                         <Button size="sm" variant="ghost" className={`w-full hover:${style.bg} hover:${style.text} transition-colors group-hover:translate-x-1`} asChild>
                                             <Link href={`/directory/tool/${tool.slug}`} className="flex items-center justify-center gap-2">

@@ -4,8 +4,11 @@ import { ArrowRight, Filter, Grid, Wrench, Database, Dna, FlaskConical, Brain, M
 import { Button } from "@/components/ui/button";
 import { getCategoryStyle, getCategoryImage } from "@/lib/utils";
 import { PageHeader } from "@/components/ui/page-header";
+import { SuggestToolDialog } from "@/components/suggest-tool-dialog";
+import { DirectorySearch } from "@/components/directory-search";
 
-export const dynamic = 'force-dynamic';
+// ISR with 1 hour revalidation
+export const revalidate = 3600;
 
 // Tool categories with descriptions
 const toolCategoryInfo = [
@@ -58,6 +61,28 @@ export default async function DirectoryPage() {
     take: 6,
     include: { category: true }
   });
+
+  // Fetch all tools for search index
+  const allTools = await prisma.tool.findMany({
+    where: { published: true },
+    select: {
+      id: true,
+      name: true,
+      description: true,
+      slug: true,
+      pricing: true,
+      category: { select: { name: true } }
+    }
+  });
+
+  const searchTools = allTools.map(t => ({
+    id: t.id,
+    name: t.name,
+    description: t.description,
+    slug: t.slug,
+    category: t.category.name,
+    pricing: t.pricing || 'Free'
+  }));
   
   const totalTools = categories.reduce((acc, c) => acc + c._count.tools, 0);
 
@@ -76,13 +101,16 @@ export default async function DirectoryPage() {
             <h2 className="text-3xl font-bold mb-6">
               The Most Comprehensive Bioinformatics Tool Database
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               From sequence alignment to machine learning, our directory catalogs the essential 
               software used in modern computational biology. Each tool is carefully reviewed 
               and categorized, with detailed information about features, pricing, and use cases. 
-              Whether you're analyzing NGS data, calling variants, or predicting protein structures, 
+              Whether you&apos;re analyzing NGS data, calling variants, or predicting protein structures, 
               find the right tool for your research.
             </p>
+            
+            {/* Orama Fuzzy Search */}
+            <DirectorySearch tools={searchTools} />
           </div>
 
           {/* Stats Bar */}
@@ -272,6 +300,19 @@ export default async function DirectoryPage() {
                 </p>
               </div>
             )}
+        </section>
+
+        {/* Suggest Tool CTA */}
+        <section className="mt-16 text-center">
+            <div className="glass-card p-8 inline-block max-w-2xl w-full">
+                <h3 className="text-xl font-bold mb-2">Can&apos;t find what you&apos;re looking for?</h3>
+                <p className="text-muted-foreground mb-6">
+                    Help us expand the directory by suggesting a tool we might have missed.
+                </p>
+                <SuggestToolDialog 
+                    categories={categories.map(c => ({ id: c.id, name: c.name }))} 
+                />
+            </div>
         </section>
       </div>
     </div>

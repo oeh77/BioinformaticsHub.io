@@ -233,11 +233,13 @@ export async function logApiUsage(
  * Middleware wrapper for API routes that require authentication
  */
 export function withApiAuth(
-  handler: (req: Request, context: any, apiKey: any) => Promise<NextResponse>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  handler: (req: Request, context: any, apiKey: NonNullable<ApiAuthResult['apiKey']>) => Promise<NextResponse>,
   options?: {
     requiredScope?: string;
   }
 ) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return async (req: Request, context: any) => {
     // Authenticate the request
     const authResult = await authenticateApiRequest(req);
@@ -266,7 +268,7 @@ export function withApiAuth(
 
     try {
       // Call the actual handler
-      const response = await handler(req, context, authResult.apiKey);
+      const response = await handler(req, context, authResult.apiKey!);
 
       // Log the API usage
       await logApiUsage(

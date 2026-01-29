@@ -1,0 +1,428 @@
+
+> bioinformatics-hub-io@0.1.0 lint
+> eslint
+
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\campaigns\page.tsx
+  10:3  warning  'TrendingUp' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  82:6  warning  React Hook useEffect has a missing dependency: 'fetchCampaigns'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\conversions\page.tsx
+   5:3  warning  'Search' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+   6:3  warning  'Filter' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  14:3  warning  'XCircle' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  15:3  warning  'AlertTriangle' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+  88:6  warning  React Hook useEffect has a missing dependency: 'fetchConversions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\links\page.tsx
+   7:3   warning  'Search' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  14:3   warning  'QrCode' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  66:10  warning  'search' is assigned a value but never used                                                                    @typescript-eslint/no-unused-vars
+  66:18  warning  'setSearch' is assigned a value but never used                                                                 @typescript-eslint/no-unused-vars
+  76:6   warning  React Hook useEffect has a missing dependency: 'fetchLinks'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\page.tsx
+  60:6  warning  React Hook useEffect has a missing dependency: 'fetchAnalytics'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\partners\page.tsx
+    8:3   warning  'Filter' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    9:3   warning  'MoreVertical' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   11:3   warning  'Trash2' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   52:6   warning  React Hook useEffect has a missing dependency: 'fetchPartners'. Either include it or remove the dependency array                                                                                                                                                                         react-hooks/exhaustive-deps
+  226:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\payouts\page.tsx
+   8:3  warning  'XCircle' is defined but never used                                                                              @typescript-eslint/no-unused-vars
+  10:3  warning  'Download' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  71:6  warning  React Hook useEffect has a missing dependency: 'fetchPayouts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\products\page.tsx
+   9:3  warning  'ExternalLink' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+  12:3  warning  'StarOff' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+  79:6  warning  React Hook useEffect has a missing dependency: 'fetchProducts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\api-keys\page.tsx
+   87:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  111:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  359:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\content\page.tsx
+  1:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\jobs\[id]\edit\page.tsx
+  46:6  warning  React Hook useEffect has a missing dependency: 'fetchJob'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\jobs\page.tsx
+  183:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\posts\[id]\preview\page.tsx
+   4:21  warning  'ExternalLink' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  92:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\reviews\page.tsx
+  56:6  warning  React Hook useEffect has a missing dependency: 'fetchReviews'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\seo\page.tsx
+  129:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\subscribers\page.tsx
+  2:41  warning  'Download' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Button' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\suggestions\page.tsx
+  56:6  warning  React Hook useEffect has a missing dependency: 'fetchSuggestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\tools\[id]\preview\page.tsx
+  104:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\users\page.tsx
+  100:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\webhooks\page.tsx
+   62:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+   86:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  109:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  328:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\blog\[slug]\page.tsx
+   70:51  warning  'i' is defined but never used                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  117:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\blog\page.tsx
+    3:28  warning  'UserIcon' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   47:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  124:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\compare\[id]\page.tsx
+  446:44  warning  'id' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\compare\page.tsx
+  3:60  warning  'Users' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\courses\page.tsx
+    4:54  warning  'Database' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  225:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\[category]\_components\category-filters.tsx
+  3:10  warning  'usePathname' is defined but never used  @typescript-eslint/no-unused-vars
+  4:10  warning  'Link' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\page.tsx
+    5:28  warning  'getCategoryImage' is defined but never used                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+  252:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\tool\[slug]\page.tsx
+  4:56  warning  'Github' is defined but never used   @typescript-eslint/no-unused-vars
+  4:64  warning  'Package' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\tools\page.tsx
+  4:18  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\docs\api\page.tsx
+  2:36  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\jobs\[slug]\page.tsx
+  103:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\jobs\page.tsx
+  115:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  187:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\campaigns\[id]\page.tsx
+    6:3   warning  'Megaphone' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+   12:3   warning  'Clock' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   21:3   warning  'ArrowUpRight' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   22:3   warning  'ArrowDownRight' is defined but never used                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+   90:6   warning  React Hook useEffect has a missing dependency: 'fetchCampaignDetails'. Either include it or remove the dependency array                                                                                                                                                                  react-hooks/exhaustive-deps
+  477:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\campaigns\page.tsx
+   8:3  warning  'TrendingUp' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  14:3  warning  'ExternalLink' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+  89:6  warning  React Hook useEffect has a missing dependency: 'fetchCampaigns'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\earnings\page.tsx
+  11:3  warning  'XCircle' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+  75:6  warning  React Hook useEffect has a missing dependency: 'fetchEarnings'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\links\page.tsx
+  17:3  warning  'Trash2' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  68:6  warning  React Hook useEffect has a missing dependency: 'fetchLinks'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\page.tsx
+   19:3  warning  'ArrowUpRight' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+   20:3  warning  'ArrowDownRight' is defined but never used                                                                         @typescript-eslint/no-unused-vars
+   70:6  warning  React Hook useEffect has a missing dependency: 'fetchDashboard'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  113:9  warning  'payoutColors' is assigned a value but never used                                                                  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\profile\page.tsx
+   31:56  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  121:21  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  128:42  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  182:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\[slug]\page.tsx
+  16:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\page.tsx
+    4:20  warning  'Download' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    9:37  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  277:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\search\page.tsx
+  72:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\stacks\[slug]\page.tsx
+   11:11  warning  'StackTool' is defined but never used  @typescript-eslint/no-unused-vars
+  144:39  warning  'addedAt' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\affiliate\auto-link\route.ts
+  26:47  warning  'config' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\affiliate\conversions\route.ts
+  13:28  warning  'CONVERSION_STATUSES' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\api-keys\[id]\route.ts
+  21:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\webhooks\[id]\route.ts
+  21:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\affiliate\partner\auth\route.ts
+   21:10  warning  'hashApiKey' is defined but never used  @typescript-eslint/no-unused-vars
+  105:30  warning  'request' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\jobs\[slug]\route.ts
+  30:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\profile\password\reset\route.ts
+   2:10  warning  'auth' is defined but never used                @typescript-eslint/no-unused-vars
+  37:11  warning  'emailHtml' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\profile\payment-methods\route.ts
+    6:27  warning  'request' is defined but never used                   @typescript-eslint/no-unused-vars
+   63:11  warning  'existingPayment' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  114:19  error    Unexpected any. Specify a different type              @typescript-eslint/no-explicit-any
+  123:30  warning  'request' is defined but never used                   @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\search\advanced\route.ts
+  84:14  warning  'type' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  84:20  warning  'category' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  84:30  warning  'pricing' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  84:39  warning  'level' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  84:46  warning  'page' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  84:56  warning  'limit' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  84:68  warning  'sort' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\search\saved\route.ts
+  15:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\github\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\npm\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\pypi\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\tools\suggest\route.ts
+  47:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\user\profile\route.ts
+  19:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\courses\route.ts
+    7:24  warning  'context' is defined but never used       @typescript-eslint/no-unused-vars
+    7:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+   19:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   71:24  warning  'context' is defined but never used       @typescript-eslint/no-unused-vars
+   71:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  110:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\search\route.ts
+  7:24  warning  'context' is defined but never used  @typescript-eslint/no-unused-vars
+  7:33  warning  'apiKey' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\tools\[id]\route.ts
+   7:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  42:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  56:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  74:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  83:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\tools\route.ts
+   8:24  warning  'context' is defined but never used  @typescript-eslint/no-unused-vars
+   8:33  warning  'apiKey' is defined but never used   @typescript-eslint/no-unused-vars
+  76:24  warning  'context' is defined but never used  @typescript-eslint/no-unused-vars
+  76:33  warning  'apiKey' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\add-to-stack-button.tsx
+  11:3   warning  'DropdownMenuSeparator' is defined but never used  @typescript-eslint/no-unused-vars
+  27:17  warning  'session' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  30:10  warning  'isLoading' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  30:21  warning  'setIsLoading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  87:14  warning  'error' is defined but never used                  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\advanced-export-button.tsx
+  70:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\export-button.tsx
+  53:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\schedule-publish.tsx
+  40:6  warning  React Hook useEffect has missing dependencies: 'onPublishedAtChange' and 'onPublishedChange'. Either include them or remove the dependency array. If 'onPublishedChange' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\affiliate\comparison-table.tsx
+  114:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\affiliate\product-card.tsx
+   34:3   warning  'productId' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+   81:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  127:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\ai-search.tsx
+  45:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\analytics\google-analytics.tsx
+  106:32  warning  'category' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\bookmark-button.tsx
+  36:6  warning  React Hook useEffect has a missing dependency: 'checkBookmarkStatus'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\command-search.tsx
+  81:3  warning  Unused eslint-disable directive (no problems were reported from 'react-hooks/set-state-in-effect')
+  84:7  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\command-search.tsx:84:7
+  82 |   useEffect(() => {
+  83 |     if (results.length !== prevResultsLengthRef.current) {
+> 84 |       setSelectedIndex(0);
+     |       ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  85 |       prevResultsLengthRef.current = results.length;
+  86 |     }
+  87 |   }, [results.length]);  react-hooks/set-state-in-effect
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\filter-bar.tsx
+  4:20  warning  'useEffect' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\about-bioinformatics.tsx
+   25:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  141:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\newsletter-section.tsx
+  50:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\my-stack-manager.tsx
+   41:17  warning  'session' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  103:14  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+  128:14  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+  158:14  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\review-section.tsx
+  118:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  157:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\search\advanced-search.tsx
+  98:6  warning  React Hook useEffect has a missing dependency: 'performSearch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\search\header-search.tsx
+  106:6  warning  React Hook useCallback has a missing dependency: 'navigateToResult'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  127:9  warning  The attribute aria-expanded is not supported by the role textbox. This role is implicit on the element input           jsx-a11y/role-supports-aria-props
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\search\search-sidebar.tsx
+   17:10  warning  'Badge' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+   20:3   warning  'Search' is defined but never used                                                                                                    @typescript-eslint/no-unused-vars
+   22:3   warning  'Star' is defined but never used                                                                                                      @typescript-eslint/no-unused-vars
+   23:3   warning  'StarOff' is defined but never used                                                                                                   @typescript-eslint/no-unused-vars
+  111:9   warning  'searchParams' is assigned a value but never used                                                                                     @typescript-eslint/no-unused-vars
+  147:6   warning  React Hook useEffect has missing dependencies: 'recordSearch' and 'resultCounts'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  201:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  210:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  239:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  249:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  275:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\stripe-card-form.tsx
+  108:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\suggest-tool-dialog.tsx
+  60:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\ui\page-header.tsx
+  1:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\user-menu.tsx
+  66:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\hooks\use-toast.ts
+  19:7  warning  'actionTypes' is assigned a value but only used as a type  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\commission.ts
+  29:7  error  'baseRate' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\cron-jobs.ts
+  553:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\notifications.ts
+  901:21  error  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+  910:3   error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  911:64  error  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\partner-auth.ts
+  19:44  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\api-auth-middleware.ts
+  241:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\cache.ts
+  69:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  69:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\elasticsearch\indexing.ts
+  9:10  warning  'analysisSettings' is defined but never used  @typescript-eslint/no-unused-vars
+  9:28  warning  'indexMappings' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\external-stats.ts
+  150:44  warning  'packageName' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\manual-tests.ts
+  118:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\profile-tests.ts
+  22:15  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\search.ts
+  14:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\seo\schema.ts
+  17:11  warning  'SchemaBase' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\stripe.ts
+  4:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\test-utils.ts
+  37:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  37:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\webhook-dispatcher.ts
+  2:36  warning  'parseEvents' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\scripts\test-runner.js
+   17:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  165:33  warning  '_' is defined but never used      @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\types\next-auth.d.ts
+  2:10  warning  'JWT' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 205 problems (37 errors, 168 warnings)
+  1 error and 1 warning potentially fixable with the `--fix` option.
+

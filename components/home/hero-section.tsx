@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Dna, Database, BookOpen, Search, Sparkles } from "lucide-react";
 
@@ -7,9 +8,12 @@ export function HeroSection() {
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-[90vh] flex flex-col justify-center">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 -z-20">
-         <div 
-            className="absolute inset-0 bg-cover bg-center animate-pulse-slow opacity-20 dark:opacity-30 mix-blend-overlay"
-            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2670&auto=format&fit=crop)' }}
+         <Image 
+            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2670&auto=format&fit=crop"
+            alt="DNA sequencing background"
+            fill
+            className="object-cover object-center animate-pulse-slow opacity-20 dark:opacity-30 mix-blend-overlay"
+            priority
          />
          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
@@ -45,17 +49,19 @@ export function HeroSection() {
         {/* Hero Search Bar - The User Requested "Search Engine Bar in Hero" */}
         <div className="w-full max-w-2xl mx-auto mb-12 relative group animate-slide-up [animation-delay:250ms]">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-purple-500/50 rounded-full blur-md opacity-30 group-hover:opacity-60 transition-opacity" />
-              <div className="relative flex items-center bg-white/10 dark:bg-black/40 border border-white/20 backdrop-blur-xl rounded-full px-2 py-2 shadow-xl focus-within:ring-2 focus-within:ring-primary/50 focus-within:border-primary/50 transition-all">
-                  <Search className="ml-4 w-6 h-6 text-muted-foreground group-focus-within:text-primary transition-colors" />
+              <form action="/search" method="GET" className="relative flex items-center bg-white/10 dark:bg-black/40 border border-white/20 backdrop-blur-xl rounded-full px-2 py-2 shadow-xl focus-within:ring-2 focus-within:ring-primary/50 focus-within:border-primary/50 transition-all">
+                  <Search className="ml-4 w-6 h-6 text-muted-foreground group-focus-within:text-primary transition-colors shrink-0" />
                   <input 
                     type="text" 
+                    name="q"
                     placeholder="Search tools, databases, resources..."
                     className="flex-1 bg-transparent border-none outline-none px-4 h-12 text-lg placeholder:text-muted-foreground/60 text-foreground"
+                    autoComplete="off"
                   />
-                  <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-full transition-transform active:scale-95 shadow-lg shadow-primary/20">
+                  <button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-full transition-transform active:scale-95 shadow-lg shadow-primary/20 shrink-0">
                     Search
                   </button>
-              </div>
+              </form>
         </div>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 animate-slide-up [animation-delay:300ms]">
@@ -65,7 +71,7 @@ export function HeroSection() {
             </Link>
           </Button>
           <Button variant="outline" size="lg" className="rounded-full h-14 px-8 text-lg glass border-white/20 hover:bg-white/40 dark:hover:bg-white/10" asChild>
-             <Link href="/resources/beginner-guide">Start Beginner's Guide</Link>
+             <Link href="/resources/beginner-guide">Start Beginner&apos;s Guide</Link>
           </Button>
         </div>
 

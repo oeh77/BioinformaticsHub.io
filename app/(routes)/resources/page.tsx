@@ -208,8 +208,8 @@ export default async function ResourcesPage() {
             <Lightbulb className="w-16 h-16 mx-auto text-primary/50 mb-4" />
             <h3 className="text-2xl font-bold mb-4">Resources Coming Soon</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              We're compiling a comprehensive library of bioinformatics resources. 
-              Soon you'll find datasets, protocols, tutorials, and documentation here.
+              We&apos;re compiling a comprehensive library of bioinformatics resources. 
+              Soon you&apos;ll find datasets, protocols, tutorials, and documentation here.
             </p>
             <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
               <div className="glass-card p-4">

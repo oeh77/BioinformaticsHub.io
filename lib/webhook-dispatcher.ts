@@ -7,7 +7,7 @@ import { generateWebhookSignature, parseEvents, isSubscribedToEvent } from "@/li
 export async function deliverWebhook(
   webhookId: string,
   event: string,
-  payload: any
+  payload: unknown
 ): Promise<boolean> {
   try {
     // Get webhook details
@@ -133,8 +133,12 @@ async function sendWebhookWithRetry(
         const delay = Math.pow(2, i) * 1000; // 1s, 2s, 4s
         await new Promise((resolve) => setTimeout(resolve, delay));
       }
-    } catch (error: any) {
-      lastError = error.message || "Network error";
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        lastError = error.message;
+      } else {
+        lastError = "Network error";
+      }
 
       // Retry on network errors
       if (i < maxRetries - 1) {
@@ -155,7 +159,7 @@ async function sendWebhookWithRetry(
  * Trigger webhooks for a specific event
  * This should be called whenever an event occurs in the system
  */
-export async function triggerWebhooks(event: string, payload: any) {
+export async function triggerWebhooks(event: string, payload: unknown) {
   try {
     // Find all active webhooks subscribed to this event
     const webhooks = await prisma.webhook.findMany({
@@ -188,18 +192,18 @@ export async function triggerWebhooks(event: string, payload: any) {
  * Helper functions to trigger specific events
  */
 export const webhookEvents = {
-  toolCreated: (tool: any) => triggerWebhooks("tool.created", tool),
-  toolUpdated: (tool: any) => triggerWebhooks("tool.updated", tool),
+  toolCreated: (tool: unknown) => triggerWebhooks("tool.created", tool),
+  toolUpdated: (tool: unknown) => triggerWebhooks("tool.updated", tool),
   toolDeleted: (toolId: string) => triggerWebhooks("tool.deleted", { id: toolId }),
 
-  courseCreated: (course: any) => triggerWebhooks("course.created", course),
-  courseUpdated: (course: any) => triggerWebhooks("course.updated", course),
+  courseCreated: (course: unknown) => triggerWebhooks("course.created", course),
+  courseUpdated: (course: unknown) => triggerWebhooks("course.updated", course),
   courseDeleted: (courseId: string) => triggerWebhooks("course.deleted", { id: courseId }),
 
-  postCreated: (post: any) => triggerWebhooks("post.created", post),
-  postPublished: (post: any) => triggerWebhooks("post.published", post),
+  postCreated: (post: unknown) => triggerWebhooks("post.created", post),
+  postPublished: (post: unknown) => triggerWebhooks("post.published", post),
 
-  subscriberNew: (subscriber: any) => triggerWebhooks("subscriber.new", subscriber),
+  subscriberNew: (subscriber: unknown) => triggerWebhooks("subscriber.new", subscriber),
   subscriberUnsubscribed: (email: string) =>
     triggerWebhooks("subscriber.unsubscribed", { email }),
 };

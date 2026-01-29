@@ -34,7 +34,7 @@ export class TestHelper {
   /**
    * Assert deep equality for objects
    */
-  static assertDeepEqual(actual: any, expected: any, message: string) {
+  static assertDeepEqual(actual: unknown, expected: unknown, message: string) {
     const passed = JSON.stringify(actual) === JSON.stringify(expected);
     if (!passed) {
       const error = `Objects don't match`;

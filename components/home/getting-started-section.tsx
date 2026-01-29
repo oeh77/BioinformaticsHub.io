@@ -76,7 +76,7 @@ export function GettingStartedSection() {
           How to Get Started in Bioinformatics
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Whether you're a wet-lab scientist looking to analyze your own data or a computer scientist 
+          Whether you&apos;re a wet-lab scientist looking to analyze your own data or a computer scientist 
           entering biology, this roadmap will guide you from beginner to proficient bioinformatician 
           in 6-12 months of dedicated study.
         </p>
@@ -145,7 +145,7 @@ export function GettingStartedSection() {
 
       {/* Essential Tools Preview */}
       <div className="glass-card p-8 md:p-12 mb-16">
-        <h3 className="text-2xl font-bold text-center mb-8">Essential Bioinformatics Tools You'll Master</h3>
+        <h3 className="text-2xl font-bold text-center mb-8">Essential Bioinformatics Tools You&apos;ll Master</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {[
             { name: "Python", category: "Programming" },

@@ -24,7 +24,10 @@ import {
   FileText,
   Users,
   Beaker,
-  Network
+  Network,
+  MessageCircle,
+  GitBranch,
+  Code2
 } from "lucide-react"
 
 const categoryItems = [
@@ -87,18 +90,25 @@ const directoryFeatures = [
     color: "text-blue-400"
   },
   { 
+    title: "Workflows", 
+    href: "/workflows",
+    description: "Build and share bioinformatics pipelines",
+    icon: GitBranch,
+    color: "text-indigo-400"
+  },
+  { 
+    title: "Playground", 
+    href: "/playground",
+    description: "Run Python code in your browser",
+    icon: Code2,
+    color: "text-cyan-400"
+  },
+  { 
     title: "New Arrivals", 
     href: "/directory",
     description: "Check out the latest additions this week",
     icon: Sparkles,
     color: "text-purple-400"
-  },
-  { 
-    title: "By Platform", 
-    href: "/directory",
-    description: "Filter by Cloud, Desktop, R, or Python",
-    icon: Layers,
-    color: "text-emerald-400"
   },
 ]
 
@@ -117,8 +127,8 @@ export function MegaMenu() {
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[450px] lg:w-[550px] lg:grid-cols-[.75fr_1fr] glass-card border border-white/10 animate-fade-in">
               <li className="row-span-4">
-                <NavigationMenuLink asChild>
-                  <a
+              <NavigationMenuLink asChild>
+                  <Link
                     className="group flex h-full w-full select-none flex-col justify-end rounded-xl bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30 p-6 no-underline outline-none hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden"
                     href="/directory"
                   >
@@ -130,7 +140,7 @@ export function MegaMenu() {
                     <p className="text-sm leading-tight text-white/80 relative z-10">
                       Explore over 120 bioinformatics tools curated for researchers.
                     </p>
-                  </a>
+                  </Link>
                 </NavigationMenuLink>
               </li>
               {directoryFeatures.map((item) => (
@@ -229,6 +239,21 @@ export function MegaMenu() {
               <div className="flex items-center gap-2">
                 <BookOpen className="h-4 w-4 group-hover:text-rose-400 transition-colors" />
                 <span>Resources</span>
+              </div>
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        {/* Community Link */}
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={cn(
+            navigationMenuTriggerStyle(), 
+            "group bg-transparent hover:bg-gradient-to-r hover:from-indigo-500/10 hover:to-violet-500/10 transition-all duration-300 pointer-events-auto"
+          )}>
+            <Link href="/community">
+              <div className="flex items-center gap-2">
+                <MessageCircle className="h-4 w-4 group-hover:text-indigo-400 transition-colors" />
+                <span>Community</span>
               </div>
             </Link>
           </NavigationMenuLink>

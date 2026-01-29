@@ -151,6 +151,18 @@ export const emailTemplates = {
     ctaText: "View Tool",
     ctaLink: toolUrl,
   }),
+
+  passwordReset: (resetLink: string) => generateEmailTemplate({
+    subject: "Reset Your Password - BioinformaticsHub",
+    preheader: "Reset your account password",
+    content: `
+      <h2>Password Reset Request</h2>
+      <p>We received a request to reset your password. If you didn't make this request, you can safely ignore this email.</p>
+      <p>Click the button below to reset your password. This link will expire in 1 hour.</p>
+    `,
+    ctaText: "Reset Password",
+    ctaLink: resetLink,
+  }),
 };
 
 // Plain text version generator

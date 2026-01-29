@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { 
   LayoutDashboard, 
@@ -16,6 +17,17 @@ import {
   Puzzle,
   Key,
   Webhook,
+  Briefcase,
+  MessageSquare,
+  Lightbulb,
+  Sparkles,
+  Globe,
+  DollarSign,
+  Menu,
+  Scale,
+  GitBranch,
+  MessageCircleQuestion,
+  Bell,
   LucideIcon
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -45,7 +57,38 @@ const navSections: NavSection[] = [
       { href: "/admin/courses", label: "Courses", icon: GraduationCap },
       { href: "/admin/resources", label: "Resources", icon: FolderOpen },
       { href: "/admin/posts", label: "Blog Posts", icon: FileText },
+      { href: "/admin/autoblog", label: "Auto-Blog", icon: Sparkles },
+      { href: "/admin/jobs", label: "Job Board", icon: Briefcase },
+      { href: "/admin/compare", label: "Compare", icon: Scale },
       { href: "/admin/categories", label: "Categories", icon: FolderTree },
+    ]
+  },
+  {
+    title: "Affiliate",
+    items: [
+      { href: "/admin/affiliate", label: "Overview", icon: DollarSign },
+      { href: "/admin/affiliate/partners", label: "Partners", icon: Users },
+      { href: "/admin/affiliate/products", label: "Products", icon: Puzzle },
+      { href: "/admin/affiliate/links", label: "Links", icon: Webhook },
+      { href: "/admin/affiliate/conversions", label: "Conversions", icon: BarChart3 },
+      { href: "/admin/affiliate/campaigns", label: "Campaigns", icon: Sparkles },
+      { href: "/admin/affiliate/payouts", label: "Payouts", icon: DollarSign },
+      { href: "/admin/affiliate/auto-link", label: "Auto-Link", icon: Lightbulb },
+    ]
+  },
+  {
+    title: "Community",
+    items: [
+      { href: "/admin/community", label: "Q&A Forum", icon: MessageCircleQuestion },
+      { href: "/admin/workflows", label: "Workflows", icon: GitBranch },
+      { href: "/admin/notifications", label: "Notifications", icon: Bell },
+    ]
+  },
+  {
+    title: "Moderation",
+    items: [
+      { href: "/admin/reviews", label: "Reviews", icon: MessageSquare },
+      { href: "/admin/suggestions", label: "Suggestions", icon: Lightbulb },
     ]
   },
   {
@@ -53,6 +96,9 @@ const navSections: NavSection[] = [
     items: [
       { href: "/admin/subscribers", label: "Subscribers", icon: Mail },
       { href: "/admin/users", label: "Users", icon: Users },
+      { href: "/admin/menus", label: "Menus", icon: Menu },
+      { href: "/admin/seo", label: "SEO", icon: Globe },
+      { href: "/admin/monetization", label: "Monetization", icon: DollarSign },
       { href: "/admin/settings", label: "Settings", icon: Settings },
       { href: "/admin/integrations", label: "Integrations", icon: Puzzle },
       { href: "/admin/api-keys", label: "API Keys", icon: Key },
@@ -60,6 +106,7 @@ const navSections: NavSection[] = [
     ]
   }
 ];
+
 
 interface AdminSidebarProps {
   userName?: string | null;
@@ -79,10 +126,19 @@ export function AdminSidebar({ userName, onNavClick }: AdminSidebarProps) {
   return (
     <div className="flex flex-col h-full overflow-y-auto">
       <div className="p-6">
-        <h2 className="text-xl font-bold mb-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          Admin Panel
-        </h2>
-        <p className="text-xs text-muted-foreground mb-6">
+        <div className="flex items-center gap-3 mb-2">
+          <Image
+            src="/icon.png"
+            alt="BioinformaticsHub.io"
+            width={48}
+            height={48}
+            className="w-12 h-12"
+          />
+          <h2 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Admin Panel
+          </h2>
+        </div>
+        <p className="text-xs text-muted-foreground mb-6 ml-[60px]">
           Welcome, {userName || "Admin"}
         </p>
         

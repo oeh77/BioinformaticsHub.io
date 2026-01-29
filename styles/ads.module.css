@@ -1,0 +1,356 @@
+/* styles/ads.module.css */
+/* Ad-specific styles for Carbon Ads and AdSense */
+
+/* === Carbon Ads Container === */
+.carbonContainer {
+  --carbon-bg: hsl(var(--card));
+  --carbon-border: hsl(var(--border));
+  --carbon-text: hsl(var(--foreground));
+  
+  font-family: inherit;
+  max-width: 330px;
+  background: var(--carbon-bg);
+  border: 1px solid var(--carbon-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.carbonContainer.header {
+  position: relative;
+}
+
+.carbonContainer.sidebar {
+  position: sticky;
+  top: 100px;
+  margin-bottom: 24px;
+}
+
+/* Override Carbon's default styles */
+.carbonContainer :global(#carbonads) {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.carbonContainer :global(.carbon-wrap) {
+  display: flex;
+  gap: 12px;
+}
+
+.carbonContainer :global(.carbon-img) {
+  flex-shrink: 0;
+}
+
+.carbonContainer :global(.carbon-img img) {
+  border-radius: 6px;
+}
+
+.carbonContainer :global(.carbon-text) {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--carbon-text);
+}
+
+.carbonContainer :global(.carbon-poweredby) {
+  margin-top: 12px;
+  font-size: 11px;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === AdSense Container === */
+.adsenseContainer {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(var(--muted) / 0.3);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.adsenseContainer.footer {
+  margin-top: 32px;
+  padding: 16px;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.adsenseContainer.inContent {
+  margin: 32px 0;
+}
+
+/* === Placeholder & Loading States === */
+.adPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 25%,
+    hsl(var(--muted) / 0.5) 50%,
+    hsl(var(--muted)) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.adLabel {
+  font-size: 10px;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.adFallback {
+  display: none;
+}
+
+/* === Consent Banner === */
+.consentBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: hsl(var(--background));
+  box-shadow: 0 -4px 24px hsl(var(--foreground) / 0.1);
+  padding: 24px;
+  border-top: 1px solid hsl(var(--border));
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.consentContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.consentContent h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.consentContent p {
+  margin: 0 0 16px 0;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.consentActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.consentBtnPrimary,
+.consentBtnSecondary {
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.consentBtnPrimary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+}
+
+.consentBtnPrimary:hover {
+  opacity: 0.9;
+}
+
+.consentBtnSecondary {
+  background: transparent;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.consentBtnSecondary:hover {
+  background: hsl(var(--muted));
+}
+
+.consentLink {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+
+.consentLink:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .consentBanner {
+    padding: 16px;
+  }
+  
+  .consentActions {
+    flex-direction: column;
+  }
+  
+  .consentBtnPrimary,
+  .consentBtnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* === AdSlot Container === */
+.adSlot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* === Sponsored Card === */
+.sponsoredCard {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.sponsoredCard:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 4px 12px hsl(var(--foreground) / 0.1);
+  transform: translateY(-2px);
+}
+
+.sponsoredCardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sponsoredCardImage {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: hsl(var(--muted));
+}
+
+.sponsoredCardContent {
+  padding: 16px;
+}
+
+.sponsoredBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sponsoredBadge span:first-child {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.sponsoredCategory {
+  font-size: 11px;
+  color: hsl(var(--muted-foreground));
+}
+
+.sponsoredCardTitle {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  line-height: 1.3;
+}
+
+.sponsoredCardDescription {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sponsoredCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sponsoredBy {
+  font-size: 11px;
+  color: hsl(var(--muted-foreground));
+}
+
+/* === In-Feed Ad (Between Listings) === */
+.inFeedAd {
+  padding: 16px;
+  background: hsl(var(--muted) / 0.3);
+  border: 1px dashed hsl(var(--border));
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.inFeedAdLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 12px;
+}
+
+/* === Sidebar Sticky Ad === */
+.sidebarAd {
+  position: sticky;
+  top: 100px;
+}
+
+/* === Inline Article Ad === */
+.inlineAd {
+  margin: 32px 0;
+  padding: 20px;
+  background: hsl(var(--muted) / 0.2);
+  border-radius: var(--radius);
+}
+
+/* === Footer Ad === */
+.footerAd {
+  margin-top: 48px;
+  padding: 24px 0;
+  border-top: 1px solid hsl(var(--border));
+}

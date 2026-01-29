@@ -18,7 +18,7 @@ export async function FeaturedTools() {
       <div className="flex items-end justify-between mb-8">
         <div>
           <h2 className="text-3xl font-bold tracking-tight mb-2">Featured Bioinformatics Tools</h2>
-          <p className="text-muted-foreground">Editor's picks for high-impact research software.</p>
+          <p className="text-muted-foreground">Editor&apos;s picks for high-impact research software.</p>
         </div>
         <Link href="/directory" className="text-primary hover:underline flex items-center text-sm font-medium">
             View all tools <ArrowRight className="ml-1 h-4 w-4" />

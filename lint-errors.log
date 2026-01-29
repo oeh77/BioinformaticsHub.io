@@ -1,0 +1,130 @@
+
+> bioinformatics-hub-io@0.1.0 lint
+> eslint --quiet
+
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\contact\page.tsx
+  20:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\contact\page.tsx:20:7
+  18 |   useEffect(() => {
+  19 |     if (isSuccess) {
+> 20 |       setShowSuccess(true);
+     |       ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  21 |       // Clear URL param to avoid stale state on refresh (optional, but good UX)
+  22 |       window.history.replaceState({}, '', '/contact');
+  23 |     }  react-hooks/set-state-in-effect
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\newsletter\page.tsx
+  83:22  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\privacy\page.tsx
+  50:65   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  50:73   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  50:138  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  50:265  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  50:331  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  55:35   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  63:28   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\profile\page.tsx
+   31:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  121:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  128:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\[slug]\page.tsx
+  16:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\beginner-guide\page.tsx
+  54:81  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  59:95  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  63:87  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  88:40  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  88:74  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\page.tsx
+  9:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\paths\page.tsx
+  32:9  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\search\page.tsx
+  72:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\terms\page.tsx
+  39:63   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  39:70   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  44:72   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  44:78   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  59:292  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\api-keys\[id]\route.ts
+  21:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\webhooks\[id]\route.ts
+  21:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\jobs\[slug]\route.ts
+  30:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\profile\payment-methods\route.ts
+  114:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\github\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\npm\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\pypi\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\tools\suggest\route.ts
+  47:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\user\profile\route.ts
+  19:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\courses\route.ts
+   19:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  110:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\tools\[id]\route.ts
+  56:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\advanced-export-button.tsx
+  70:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\export-button.tsx
+  53:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\ai-search.tsx
+  45:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\command-search.tsx
+  83:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\command-search.tsx:83:7
+  81 |   useEffect(() => {
+  82 |     if (selectedIndex !== 0) {
+> 83 |       setSelectedIndex(0);
+     |       ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  84 |     }
+  85 |   }, [results]);
+  86 |  react-hooks/set-state-in-effect
+
+Γ£û 43 problems (43 errors, 0 warnings)
+

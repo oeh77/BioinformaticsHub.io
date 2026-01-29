@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { Prisma } from "@prisma/client";
 import { withApiAuth } from "@/lib/api-auth-middleware";
 
 // GET /api/v1/tools - List all tools
@@ -16,7 +17,7 @@ export const GET = withApiAuth(
       const skip = (page - 1) * limit;
 
       // Build query
-      const where: any = { published: true };
+      const where: Prisma.ToolWhereInput = { published: true };
       if (category) {
         where.category = { slug: category };
       }
@@ -117,10 +118,10 @@ export const POST = withApiAuth(
       });
 
       return NextResponse.json({ tool }, { status: 201 });
-    } catch (error: any) {
+  } catch (error: unknown) {
       console.error("Error creating tool:", error);
       
-      if (error.code === "P2002") {
+      if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
         return NextResponse.json(
           { error: "A tool with this slug already exists" },
           { status: 409 }

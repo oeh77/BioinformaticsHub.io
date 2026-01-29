@@ -2,13 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { UserMenu } from "@/components/user-menu";
-import { Search } from "lucide-react";
 import { MegaMenu } from "@/components/layout/mega-menu";
 import { useToast } from "@/hooks/use-toast";
 import { SubscribeDialog } from "@/components/ui/subscribe-dialog";
+import { HeaderSearch } from "@/components/search/header-search";
+import { NotificationBell } from "@/components/notifications/NotificationBell";
+import { CarbonAd } from "@/components/ads";
 
 export function Header() {
   const { toast } = useToast();
@@ -24,48 +27,39 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-50 glass border-b border-white/10">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+        <div className="w-full px-3 md:px-4 h-12 flex items-center gap-2">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg">
-              B
-            </div>
-            <span className="font-bold text-xl tracking-tight">BioHub<span className="text-primary">.io</span></span>
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/logo.png"
+              alt="BioinformaticsHub.io"
+              width={32}
+              height={32}
+              className="h-7 w-auto"
+              priority
+            />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium z-50">
-             <MegaMenu />
+          {/* Navigation */}
+          <nav className="hidden lg:flex items-center gap-0.5 flex-1 min-w-0">
+            <MegaMenu />
           </nav>
 
-          {/* Actions */}
-          <div className="flex items-center gap-3">
-            <form action="/search" method="GET" className="hidden md:flex items-center relative">
-               <input 
-                 type="text" 
-                 name="q"
-                 placeholder="Search..." 
-                 className="h-9 w-[200px] rounded-full bg-secondary/50 border-none px-4 text-sm focus:ring-1 focus:ring-primary outline-none transition-all"
-                 autoComplete="off"
-               />
-               <Search className="absolute right-3 top-2.5 h-4 w-4 text-muted-foreground pointer-events-none" />
-            </form>
-            
+          {/* Spacer for smaller screens */}
+          <div className="flex-1 lg:hidden" />
+
+          {/* Actions - all items visible */}
+          <div className="flex items-center gap-1 shrink-0">
+            <HeaderSearch className="hidden md:block" />
             <ThemeToggle />
+            <NotificationBell />
             
-            <Button size="sm" variant="ghost" className="hidden md:flex rounded-full" onClick={() => setIsDialogOpen(true)}>
+            <Button size="sm" variant="ghost" className="hidden lg:flex rounded-full text-xs h-8 px-2" onClick={() => setIsDialogOpen(true)}>
               Subscribe
             </Button>
 
             <UserMenu />
-            
-            {/* Mobile Menu Trigger (Placeholder) */}
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <span className="sr-only">Menu</span>
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </Button>
           </div>
         </div>
       </header>

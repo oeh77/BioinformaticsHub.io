@@ -521,7 +521,7 @@ function BasicComparisonView({ comparison, id }: { comparison: typeof basicCompa
                     </h4>
                     <p className="text-sm text-muted-foreground">
                       Check Biostars and GitHub issues. A tool with an active community means 
-                      you'll find help faster when you encounter errors.
+                      you&apos;ll find help faster when you encounter errors.
                     </p>
                   </div>
                   <div>
@@ -529,7 +529,7 @@ function BasicComparisonView({ comparison, id }: { comparison: typeof basicCompa
                       <CheckCircle className="w-4 h-4 text-primary" /> Citation Count
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      Widely cited tools are often the "standard" for publication. 
+                      Widely cited tools are often the &quot;standard&quot; for publication. 
                       Reviewers are more likely to accept results from established software.
                     </p>
                   </div>

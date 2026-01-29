@@ -207,6 +207,7 @@ export default async function AnalyticsPage() {
     },
   ];
 
+// Refactored AnalyticsPage
   return (
     <div className="space-y-6">
       <div>
@@ -220,7 +221,7 @@ export default async function AnalyticsPage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {contentCards.map((card) => (
           <Link key={card.label} href={card.href}>
-            <div className="glass-card p-4 hover:border-primary/30 transition-colors cursor-pointer group">
+            <div className="bg-card border border-border p-4 rounded-lg shadow-sm hover:border-primary/50 transition-colors cursor-pointer group">
               <div className="flex items-start justify-between">
                 <div
                   className={`w-10 h-10 rounded-lg ${card.bgColor} flex items-center justify-center`}
@@ -229,10 +230,10 @@ export default async function AnalyticsPage() {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <p className="text-3xl font-bold mt-3">{card.total}</p>
+              <p className="text-3xl font-bold mt-3 text-foreground">{card.total}</p>
               <p className="text-sm text-muted-foreground">{card.label}</p>
               <div className="flex items-center gap-2 mt-2">
-                <span className="text-xs text-green-400">
+                <span className="text-xs text-green-500 dark:text-green-400">
                   +{card.weekly} this week
                 </span>
                 <span className="text-xs text-muted-foreground">
@@ -247,21 +248,21 @@ export default async function AnalyticsPage() {
       {/* User & Subscriber Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Link href="/admin/users">
-          <div className="glass-card p-6 hover:border-primary/30 transition-colors cursor-pointer">
+          <div className="bg-card border border-border p-6 rounded-lg shadow-sm hover:border-primary/50 transition-colors cursor-pointer">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-cyan-400" />
+                <Users className="w-6 h-6 text-cyan-500" />
               </div>
               <div>
-                <p className="text-2xl font-bold">{analytics.totals.users}</p>
+                <p className="text-2xl font-bold text-foreground">{analytics.totals.users}</p>
                 <p className="text-sm text-muted-foreground">Total Users</p>
               </div>
             </div>
-            <div className="mt-4 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-4 border-t border-border">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-green-400" />
-                <span className="text-sm">
-                  +{analytics.weekly.users} new this week
+                <TrendingUp className="w-4 h-4 text-green-500 dark:text-green-400" />
+                <span className="text-sm text-muted-foreground">
+                  <span className="text-green-500 dark:text-green-400 font-medium">+{analytics.weekly.users}</span> new this week
                 </span>
               </div>
             </div>
@@ -269,23 +270,23 @@ export default async function AnalyticsPage() {
         </Link>
 
         <Link href="/admin/subscribers">
-          <div className="glass-card p-6 hover:border-primary/30 transition-colors cursor-pointer">
+          <div className="bg-card border border-border p-6 rounded-lg shadow-sm hover:border-primary/50 transition-colors cursor-pointer">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center">
-                <Mail className="w-6 h-6 text-pink-400" />
+                <Mail className="w-6 h-6 text-pink-500" />
               </div>
               <div>
-                <p className="text-2xl font-bold">
+                <p className="text-2xl font-bold text-foreground">
                   {analytics.totals.subscribers}
                 </p>
                 <p className="text-sm text-muted-foreground">Subscribers</p>
               </div>
             </div>
-            <div className="mt-4 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-4 border-t border-border">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-green-400" />
-                <span className="text-sm">
-                  +{analytics.weekly.subscribers} new this week
+                <TrendingUp className="w-4 h-4 text-green-500 dark:text-green-400" />
+                <span className="text-sm text-muted-foreground">
+                  <span className="text-green-500 dark:text-green-400 font-medium">+{analytics.weekly.subscribers}</span> new this week
                 </span>
               </div>
             </div>
@@ -293,19 +294,19 @@ export default async function AnalyticsPage() {
         </Link>
 
         <Link href="/admin/categories">
-          <div className="glass-card p-6 hover:border-primary/30 transition-colors cursor-pointer">
+          <div className="bg-card border border-border p-6 rounded-lg shadow-sm hover:border-primary/50 transition-colors cursor-pointer">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center">
-                <Calendar className="w-6 h-6 text-amber-400" />
+                <Calendar className="w-6 h-6 text-amber-500" />
               </div>
               <div>
-                <p className="text-2xl font-bold">
+                <p className="text-2xl font-bold text-foreground">
                   {analytics.totals.categories}
                 </p>
                 <p className="text-sm text-muted-foreground">Categories</p>
               </div>
             </div>
-            <div className="mt-4 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-4 border-t border-border">
               <div className="flex items-center gap-2">
                 <span className="text-sm text-muted-foreground">
                   {analytics.featuredTools} featured tools
@@ -317,45 +318,45 @@ export default async function AnalyticsPage() {
       </div>
 
       {/* Monthly Growth */}
-      <div className="glass-card p-6">
-        <h2 className="text-lg font-semibold mb-4">Monthly Growth (Last 30 Days)</h2>
+      <div className="bg-card border border-border p-6 rounded-lg shadow-sm">
+        <h2 className="text-lg font-semibold mb-4 text-foreground">Monthly Growth (Last 30 Days)</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-blue-400" />
+              <div className="w-3 h-3 rounded-full bg-blue-500" />
               <span className="text-sm text-muted-foreground">Tools</span>
             </div>
-            <p className="text-2xl font-bold">+{analytics.monthly.tools}</p>
+            <p className="text-2xl font-bold text-foreground">+{analytics.monthly.tools}</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-green-400" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
               <span className="text-sm text-muted-foreground">Courses</span>
             </div>
-            <p className="text-2xl font-bold">+{analytics.monthly.courses}</p>
+            <p className="text-2xl font-bold text-foreground">+{analytics.monthly.courses}</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-purple-400" />
+              <div className="w-3 h-3 rounded-full bg-purple-500" />
               <span className="text-sm text-muted-foreground">Posts</span>
             </div>
-            <p className="text-2xl font-bold">+{analytics.monthly.posts}</p>
+            <p className="text-2xl font-bold text-foreground">+{analytics.monthly.posts}</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-pink-400" />
+              <div className="w-3 h-3 rounded-full bg-pink-500" />
               <span className="text-sm text-muted-foreground">Subscribers</span>
             </div>
-            <p className="text-2xl font-bold">+{analytics.monthly.subscribers}</p>
+            <p className="text-2xl font-bold text-foreground">+{analytics.monthly.subscribers}</p>
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top Categories */}
-        <div className="glass-card p-6">
+        <div className="bg-card border border-border p-6 rounded-lg shadow-sm">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold">Top Categories</h2>
+            <h2 className="text-lg font-semibold text-foreground">Top Categories</h2>
             <Link
               href="/admin/categories"
               className="text-sm text-primary hover:underline flex items-center gap-1"
@@ -373,20 +374,20 @@ export default async function AnalyticsPage() {
               return (
                 <div
                   key={cat.id}
-                  className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                  className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
                       {cat.name[0]}
                     </div>
                     <div>
-                      <p className="font-medium">{cat.name}</p>
+                      <p className="font-medium text-foreground">{cat.name}</p>
                       <p className="text-xs text-muted-foreground">
                         {cat._count.tools} tools, {cat._count.courses} courses
                       </p>
                     </div>
                   </div>
-                  <span className="text-lg font-bold">{total}</span>
+                  <span className="text-lg font-bold text-foreground">{total}</span>
                 </div>
               );
             })}
@@ -394,8 +395,8 @@ export default async function AnalyticsPage() {
         </div>
 
         {/* Recent Activity */}
-        <div className="glass-card p-6">
-          <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
+        <div className="bg-card border border-border p-6 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-4 text-foreground">Recent Activity</h2>
           <div className="space-y-4">
             {/* Recent Tools */}
             <div>
@@ -406,7 +407,7 @@ export default async function AnalyticsPage() {
                 <Link
                   key={tool.id}
                   href={`/admin/tools/${tool.id}/edit`}
-                  className="flex items-center justify-between py-2 hover:text-primary transition-colors"
+                  className="flex items-center justify-between py-2 hover:text-primary transition-colors text-foreground"
                 >
                   <span className="text-sm">{tool.name}</span>
                   <span className="text-xs text-muted-foreground">
@@ -417,7 +418,7 @@ export default async function AnalyticsPage() {
             </div>
 
             {/* Recent Posts */}
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 border-t border-border">
               <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
                 Latest Posts
               </p>
@@ -425,12 +426,12 @@ export default async function AnalyticsPage() {
                 <Link
                   key={post.id}
                   href={`/admin/posts/${post.id}/edit`}
-                  className="flex items-center justify-between py-2 hover:text-primary transition-colors"
+                  className="flex items-center justify-between py-2 hover:text-primary transition-colors text-foreground"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="text-sm">{post.title}</span>
+                    <span className="text-sm truncate max-w-[200px]">{post.title}</span>
                     {!post.published && (
-                      <span className="text-xs px-1.5 py-0.5 rounded bg-yellow-500/10 text-yellow-500">
+                      <span className="text-xs px-1.5 py-0.5 rounded bg-yellow-500/10 text-yellow-600 dark:text-yellow-400">
                         Draft
                       </span>
                     )}
@@ -443,14 +444,14 @@ export default async function AnalyticsPage() {
             </div>
 
             {/* Recent Users */}
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 border-t border-border">
               <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
                 New Users
               </p>
               {analytics.recentItems.users.slice(0, 3).map((user) => (
                 <div
                   key={user.id}
-                  className="flex items-center justify-between py-2"
+                  className="flex items-center justify-between py-2 text-foreground"
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-sm">

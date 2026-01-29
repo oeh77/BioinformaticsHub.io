@@ -90,7 +90,7 @@ export default function ApiDocsPage() {
                 in your admin dashboard and create a new API key with the required scopes.
               </p>
               <div className="bg-black/40 p-4 rounded-lg font-mono text-sm overflow-x-auto">
-                <div className="text-muted-foreground">// Your API credentials</div>
+                <div className="text-muted-foreground">{/* Your API credentials */}</div>
                 <div>
                   API Key: <span className="text-green-400">bhio_live_abc123...</span>
                 </div>
@@ -112,7 +112,7 @@ export default function ApiDocsPage() {
               </p>
               <div className="bg-black/40 p-4 rounded-lg font-mono text-sm overflow-x-auto space-y-3">
                 <div>
-                  <div className="text-muted-foreground">// cURL</div>
+                  <div className="text-muted-foreground">{/* cURL */}</div>
                   <pre className="text-green-400">
 {`curl -X GET https://biohub.io/api/v1/tools \\
   -H "Authorization: Bearer YOUR_API_KEY:YOUR_SECRET_KEY"`}
@@ -120,7 +120,7 @@ export default function ApiDocsPage() {
                 </div>
                 
                 <div className="border-t border-white/10 pt-3">
-                  <div className="text-muted-foreground">// JavaScript (fetch)</div>
+                  <div className="text-muted-foreground">{/* JavaScript (fetch) */}</div>
                   <pre className="text-blue-400">
 {`const response = await fetch('https://biohub.io/api/v1/tools', {
   headers: {
@@ -132,7 +132,7 @@ const data = await response.json();`}
                 </div>
 
                 <div className="border-t border-white/10 pt-3">
-                  <div className="text-muted-foreground">// Python (requests)</div>
+                  <div className="text-muted-foreground">{/* Python (requests) */}</div>
                   <pre className="text-yellow-400">
 {`import requests
 

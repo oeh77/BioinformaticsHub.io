@@ -12,7 +12,7 @@ const CACHE_DURATION = {
 /**
  * Memoization cache for expensive operations
  */
-const cache = new Map<string, { data: any; timestamp: number; ttl: number }>();
+const cache = new Map<string, { data: unknown; timestamp: number; ttl: number }>();
 
 /**
  * Get cached data or compute and cache it
@@ -66,7 +66,8 @@ export function clearCache() {
 /**
  * Debounce function for search inputs
  */
-export function debounce<T extends (...args: any[]) => any>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function debounce<T extends (...args: any[]) => void>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -80,7 +81,8 @@ export function debounce<T extends (...args: any[]) => any>(
 /**
  * Throttle function for scroll events
  */
-export function throttle<T extends (...args: any[]) => any>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function throttle<T extends (...args: any[]) => void>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {

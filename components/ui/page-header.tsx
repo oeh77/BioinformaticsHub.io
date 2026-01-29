@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -19,10 +21,15 @@ export function PageHeader({ title, subtitle, backgroundImage, className }: Page
          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-primary/10" />
          
          {backgroundImage && (
-             <div 
-                className="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-20 animate-pulse-slow"
-                style={{ backgroundImage: `url(${backgroundImage})` }}
-             />
+             <div className="absolute inset-0 opacity-30 dark:opacity-20 animate-pulse-slow">
+                <Image 
+                    src={backgroundImage} 
+                    alt="Background" 
+                    fill 
+                    className="object-cover object-center"
+                    priority
+                />
+             </div>
          )}
          {/* Gradient Overlay for Fade */}
          <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />

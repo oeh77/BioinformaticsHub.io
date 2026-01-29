@@ -3,19 +3,80 @@
 > eslint
 
 
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\auto-link\page.tsx
+  222:57  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  222:72  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  287:43  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  287:57  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\campaigns\page.tsx
+  10:3  warning  'TrendingUp' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  82:6  warning  React Hook useEffect has a missing dependency: 'fetchCampaigns'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\conversions\page.tsx
+   5:3  warning  'Search' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+   6:3  warning  'Filter' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+  14:3  warning  'XCircle' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  15:3  warning  'AlertTriangle' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+  88:6  warning  React Hook useEffect has a missing dependency: 'fetchConversions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\links\page.tsx
+   7:3   warning  'Search' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  14:3   warning  'QrCode' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  66:10  warning  'search' is assigned a value but never used                                                                    @typescript-eslint/no-unused-vars
+  66:18  warning  'setSearch' is assigned a value but never used                                                                 @typescript-eslint/no-unused-vars
+  76:6   warning  React Hook useEffect has a missing dependency: 'fetchLinks'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\page.tsx
+  60:6  warning  React Hook useEffect has a missing dependency: 'fetchAnalytics'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\partners\page.tsx
+    8:3   warning  'Filter' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    9:3   warning  'MoreVertical' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   11:3   warning  'Trash2' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   52:6   warning  React Hook useEffect has a missing dependency: 'fetchPartners'. Either include it or remove the dependency array                                                                                                                                                                         react-hooks/exhaustive-deps
+  226:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\payouts\page.tsx
+   8:3  warning  'XCircle' is defined but never used                                                                              @typescript-eslint/no-unused-vars
+  10:3  warning  'Download' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  71:6  warning  React Hook useEffect has a missing dependency: 'fetchPayouts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\affiliate\products\page.tsx
+   9:3  warning  'ExternalLink' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+  12:3  warning  'StarOff' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+  79:6  warning  React Hook useEffect has a missing dependency: 'fetchProducts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\api-keys\page.tsx
+   87:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  111:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  359:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\content\page.tsx
   1:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\jobs\[id]\edit\page.tsx
+  46:6  warning  React Hook useEffect has a missing dependency: 'fetchJob'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\jobs\page.tsx
+  183:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\posts\[id]\preview\page.tsx
    4:21  warning  'ExternalLink' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
   92:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
 
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\settings\page.tsx
-  207:12  error  Parsing error: Expected corresponding JSX closing tag for 'div'
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\reviews\page.tsx
+  56:6  warning  React Hook useEffect has a missing dependency: 'fetchReviews'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\seo\page.tsx
+  129:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\subscribers\page.tsx
   2:41  warning  'Download' is defined but never used  @typescript-eslint/no-unused-vars
   3:10  warning  'Button' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\suggestions\page.tsx
+  56:6  warning  React Hook useEffect has a missing dependency: 'fetchSuggestions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\tools\[id]\preview\page.tsx
   104:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
@@ -23,11 +84,20 @@ C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\users\page.tsx
   100:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
 
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\admin\webhooks\page.tsx
+   62:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+   86:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  109:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  328:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\blog\[slug]\page.tsx
+   70:51  warning  'i' is defined but never used                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  117:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\blog\page.tsx
     3:28  warning  'UserIcon' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
    47:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
   124:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
-  165:17  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\compare\[id]\page.tsx
   446:44  warning  'id' is defined but never used                                   @typescript-eslint/no-unused-vars
@@ -42,23 +112,74 @@ C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\cours
     4:54  warning  'Database' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
   225:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
 
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\[category]\_components\category-filters.tsx
+  3:10  warning  'usePathname' is defined but never used  @typescript-eslint/no-unused-vars
+  4:10  warning  'Link' is defined but never used         @typescript-eslint/no-unused-vars
+
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\[category]\page.tsx
-  232:130  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
-  232:149  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  160:130  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  160:149  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\page.tsx
     5:28  warning  'getCategoryImage' is defined but never used                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
-   83:26  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
-  224:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  108:26  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  252:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  308:59  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  308:75  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\tool\[slug]\page.tsx
+  4:56  warning  'Github' is defined but never used   @typescript-eslint/no-unused-vars
+  4:64  warning  'Package' is defined but never used  @typescript-eslint/no-unused-vars
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\directory\tools\page.tsx
   4:18  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
 
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\profile\page.tsx
-  88:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\docs\api\page.tsx
+    2:36  warning  'ExternalLink' is defined but never used                                @typescript-eslint/no-unused-vars
+   93:56  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  115:58  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  123:58  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  135:58  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
 
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\register\page.tsx
-  307:12  error  Parsing error: JSX expressions must have one parent element
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\jobs\[slug]\page.tsx
+  103:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\jobs\page.tsx
+  115:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  187:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\campaigns\[id]\page.tsx
+    6:3   warning  'Megaphone' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+   12:3   warning  'Clock' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   21:3   warning  'ArrowUpRight' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   22:3   warning  'ArrowDownRight' is defined but never used                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+   90:6   warning  React Hook useEffect has a missing dependency: 'fetchCampaignDetails'. Either include it or remove the dependency array                                                                                                                                                                  react-hooks/exhaustive-deps
+  477:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\campaigns\page.tsx
+   8:3  warning  'TrendingUp' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  14:3  warning  'ExternalLink' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+  89:6  warning  React Hook useEffect has a missing dependency: 'fetchCampaigns'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\earnings\page.tsx
+  11:3  warning  'XCircle' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+  75:6  warning  React Hook useEffect has a missing dependency: 'fetchEarnings'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\links\page.tsx
+  17:3  warning  'Trash2' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  68:6  warning  React Hook useEffect has a missing dependency: 'fetchLinks'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\partner\page.tsx
+   19:3  warning  'ArrowUpRight' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+   20:3  warning  'ArrowDownRight' is defined but never used                                                                         @typescript-eslint/no-unused-vars
+   70:6  warning  React Hook useEffect has a missing dependency: 'fetchDashboard'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  113:9  warning  'payoutColors' is assigned a value but never used                                                                  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\profile\page.tsx
+   31:56  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  121:21  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  128:42  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  182:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resources\[slug]\page.tsx
   16:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
@@ -70,589 +191,156 @@ C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\resou
   212:23  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
   277:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
 
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\search\page.tsx
+  72:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\(routes)\stacks\[slug]\page.tsx
+   11:11  warning  'StackTool' is defined but never used  @typescript-eslint/no-unused-vars
+  144:39  warning  'addedAt' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\affiliate\auto-link\route.ts
+  26:47  warning  'config' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\affiliate\conversions\route.ts
+  13:28  warning  'CONVERSION_STATUSES' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\api-keys\[id]\route.ts
+  21:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\admin\webhooks\[id]\route.ts
+  21:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\affiliate\partner\auth\route.ts
+   21:10  warning  'hashApiKey' is defined but never used  @typescript-eslint/no-unused-vars
+  105:30  warning  'request' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\ai-search\route.ts
+   66:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  119:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\jobs\[slug]\route.ts
+  30:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\jobs\route.ts
+   16:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   73:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  145:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\profile\password\reset\route.ts
+   2:10  warning  'auth' is defined but never used                @typescript-eslint/no-unused-vars
+  37:11  warning  'emailHtml' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\profile\payment-methods\route.ts
+    6:27  warning  'request' is defined but never used                   @typescript-eslint/no-unused-vars
+   63:11  warning  'existingPayment' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  114:19  error    Unexpected any. Specify a different type              @typescript-eslint/no-explicit-any
+  123:30  warning  'request' is defined but never used                   @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\search\advanced\route.ts
+  84:14  warning  'type' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  84:20  warning  'category' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  84:30  warning  'pricing' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  84:39  warning  'level' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  84:46  warning  'page' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  84:56  warning  'limit' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  84:68  warning  'sort' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\search\saved\route.ts
+  15:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\github\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\npm\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\stats\pypi\route.ts
+  26:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\tools\suggest\route.ts
+  47:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\user\profile\route.ts
+  19:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\courses\route.ts
+    7:24  warning  'context' is defined but never used       @typescript-eslint/no-unused-vars
+    7:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+   19:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   71:24  warning  'context' is defined but never used       @typescript-eslint/no-unused-vars
+   71:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  110:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\search\route.ts
+  7:24  warning  'context' is defined but never used  @typescript-eslint/no-unused-vars
+  7:33  warning  'apiKey' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\tools\[id]\route.ts
+   7:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  42:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  56:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  74:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  83:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\app\api\v1\tools\route.ts
+    7:24  warning  'context' is defined but never used       @typescript-eslint/no-unused-vars
+    7:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+   19:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   75:24  warning  'context' is defined but never used       @typescript-eslint/no-unused-vars
+   75:33  warning  'apiKey' is defined but never used        @typescript-eslint/no-unused-vars
+  120:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\add-to-stack-button.tsx
+  11:3   warning  'DropdownMenuSeparator' is defined but never used  @typescript-eslint/no-unused-vars
+  27:17  warning  'session' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  30:10  warning  'isLoading' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  30:21  warning  'setIsLoading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  87:14  warning  'error' is defined but never used                  @typescript-eslint/no-unused-vars
+
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\advanced-export-button.tsx
   70:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\export-button.tsx
   53:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
 
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx
-  155:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:155:12
-  153 |         {/* Text formatting */}
-  154 |         <div className="flex gap-1 border-r border-white/10 pr-2 mr-1">
-> 155 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  156 |             onClick={() => editor.chain().focus().toggleBold().run()}
-  157 |             active={editor.isActive("bold")}
-  158 |             title="Bold (Ctrl+B)"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                     react-hooks/static-components
-  162:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:162:12
-  160 |             <Bold className="w-4 h-4" />
-  161 |           </ToolbarButton>
-> 162 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  163 |             onClick={() => editor.chain().focus().toggleItalic().run()}
-  164 |             active={editor.isActive("italic")}
-  165 |             title="Italic (Ctrl+I)"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                   react-hooks/static-components
-  169:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:169:12
-  167 |             <Italic className="w-4 h-4" />
-  168 |           </ToolbarButton>
-> 169 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  170 |             onClick={() => editor.chain().focus().toggleUnderline().run()}
-  171 |             active={editor.isActive("underline")}
-  172 |             title="Underline (Ctrl+U)"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                        react-hooks/static-components
-  176:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:176:12
-  174 |             <UnderlineIcon className="w-4 h-4" />
-  175 |           </ToolbarButton>
-> 176 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  177 |             onClick={() => editor.chain().focus().toggleStrike().run()}
-  178 |             active={editor.isActive("strike")}
-  179 |             title="Strikethrough"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                            react-hooks/static-components
-  183:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:183:12
-  181 |             <Strikethrough className="w-4 h-4" />
-  182 |           </ToolbarButton>
-> 183 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  184 |             onClick={() => editor.chain().focus().toggleCode().run()}
-  185 |             active={editor.isActive("code")}
-  186 |             title="Inline Code"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                  react-hooks/static-components
-  194:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:194:12
-  192 |         {/* Headings */}
-  193 |         <div className="flex gap-1 border-r border-white/10 pr-2 mr-1">
-> 194 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  195 |             onClick={() =>
-  196 |               editor.chain().focus().toggleHeading({ level: 1 }).run()
-  197 |             }
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                                 react-hooks/static-components
-  203:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:203:12
-  201 |             <Heading1 className="w-4 h-4" />
-  202 |           </ToolbarButton>
-> 203 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  204 |             onClick={() =>
-  205 |               editor.chain().focus().toggleHeading({ level: 2 }).run()
-  206 |             }
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                                                          react-hooks/static-components
-  212:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:212:12
-  210 |             <Heading2 className="w-4 h-4" />
-  211 |           </ToolbarButton>
-> 212 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  213 |             onClick={() =>
-  214 |               editor.chain().focus().toggleHeading({ level: 3 }).run()
-  215 |             }
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                                                          react-hooks/static-components
-  225:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:225:12
-  223 |         {/* Lists and quotes */}
-  224 |         <div className="flex gap-1 border-r border-white/10 pr-2 mr-1">
-> 225 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  226 |             onClick={() => editor.chain().focus().toggleBulletList().run()}
-  227 |             active={editor.isActive("bulletList")}
-  228 |             title="Bullet List"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div          react-hooks/static-components
-  232:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:232:12
-  230 |             <List className="w-4 h-4" />
-  231 |           </ToolbarButton>
-> 232 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  233 |             onClick={() => editor.chain().focus().toggleOrderedList().run()}
-  234 |             active={editor.isActive("orderedList")}
-  235 |             title="Numbered List"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                           react-hooks/static-components
-  239:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:239:12
-  237 |             <ListOrdered className="w-4 h-4" />
-  238 |           </ToolbarButton>
-> 239 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  240 |             onClick={() => editor.chain().focus().toggleBlockquote().run()}
-  241 |             active={editor.isActive("blockquote")}
-  242 |             title="Quote"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                              react-hooks/static-components
-  246:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:246:12
-  244 |             <Quote className="w-4 h-4" />
-  245 |           </ToolbarButton>
-> 246 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  247 |             onClick={() => editor.chain().focus().setHorizontalRule().run()}
-  248 |             title="Horizontal Rule"
-  249 |           >
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                                                react-hooks/static-components
-  256:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:256:12
-  254 |         {/* Text alignment */}
-  255 |         <div className="flex gap-1 border-r border-white/10 pr-2 mr-1">
-> 256 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  257 |             onClick={() => editor.chain().focus().setTextAlign("left").run()}
-  258 |             active={editor.isActive({ textAlign: "left" })}
-  259 |             title="Align Left"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div  react-hooks/static-components
-  263:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:263:12
-  261 |             <AlignLeft className="w-4 h-4" />
-  262 |           </ToolbarButton>
-> 263 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  264 |             onClick={() => editor.chain().focus().setTextAlign("center").run()}
-  265 |             active={editor.isActive({ textAlign: "center" })}
-  266 |             title="Align Center"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                          react-hooks/static-components
-  270:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:270:12
-  268 |             <AlignCenter className="w-4 h-4" />
-  269 |           </ToolbarButton>
-> 270 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  271 |             onClick={() => editor.chain().focus().setTextAlign("right").run()}
-  272 |             active={editor.isActive({ textAlign: "right" })}
-  273 |             title="Align Right"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                           react-hooks/static-components
-  281:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:281:12
-  279 |         {/* Links and images */}
-  280 |         <div className="flex gap-1 border-r border-white/10 pr-2 mr-1">
-> 281 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  282 |             onClick={() => setShowLinkInput(!showLinkInput)}
-  283 |             active={editor.isActive("link") || showLinkInput}
-  284 |             title="Add Link"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                 react-hooks/static-components
-  288:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:288:12
-  286 |             <LinkIcon className="w-4 h-4" />
-  287 |           </ToolbarButton>
-> 288 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  289 |             onClick={() => setShowImageInput(!showImageInput)}
-  290 |             active={showImageInput}
-  291 |             title="Add Image"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                                         react-hooks/static-components
-  299:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:299:12
-  297 |         {/* Undo/Redo */}
-  298 |         <div className="flex gap-1">
-> 299 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  300 |             onClick={() => editor.chain().focus().undo().run()}
-  301 |             disabled={!editor.can().undo()}
-  302 |             title="Undo (Ctrl+Z)"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                                     react-hooks/static-components
-  306:12  error  Error: Cannot create components during render
-
-Components created during render will reset their state each time they are created. Declare components outside of render.
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:306:12
-  304 |             <Undo className="w-4 h-4" />
-  305 |           </ToolbarButton>
-> 306 |           <ToolbarButton
-      |            ^^^^^^^^^^^^^ This component is created during render
-  307 |             onClick={() => editor.chain().focus().redo().run()}
-  308 |             disabled={!editor.can().redo()}
-  309 |             title="Redo (Ctrl+Y)"
-
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\rich-text-editor.tsx:119:25
-  117 |   }
-  118 |
-> 119 |   const ToolbarButton = ({
-      |                         ^^
-> 120 |     onClick,
-      | ^^^^^^^^^^^^
-> 121 |     active = false,
-      ΓÇª
-      | ^^^^^^^^^^^^
-> 144 |     </button>
-      | ^^^^^^^^^^^^
-> 145 |   );
-      | ^^^^ The component is created during render here
-  146 |
-  147 |   return (
-  148 |     <div                                                                react-hooks/static-components
-
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\admin\schedule-publish.tsx
   40:6  warning  React Hook useEffect has missing dependencies: 'onPublishedAtChange' and 'onPublishedChange'. Either include them or remove the dependency array. If 'onPublishedChange' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
 
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\affiliate\comparison-table.tsx
+  114:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\affiliate\product-card.tsx
+   34:3   warning  'productId' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+   81:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  127:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\ai-search.tsx
+  45:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\analytics\google-analytics.tsx
+  106:32  warning  'category' is defined but never used  @typescript-eslint/no-unused-vars
+
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\bookmark-button.tsx
   36:6  warning  React Hook useEffect has a missing dependency: 'checkBookmarkStatus'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\command-search.tsx
+  81:3  warning  Unused eslint-disable directive (no problems were reported from 'react-hooks/set-state-in-effect')
+  84:7  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\command-search.tsx:84:7
+  82 |   useEffect(() => {
+  83 |     if (results.length !== prevResultsLengthRef.current) {
+> 84 |       setSelectedIndex(0);
+     |       ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  85 |       prevResultsLengthRef.current = results.length;
+  86 |     }
+  87 |   }, [results.length]);  react-hooks/set-state-in-effect
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\filter-bar.tsx
   4:20  warning  'useEffect' is defined but never used  @typescript-eslint/no-unused-vars
@@ -677,10 +365,46 @@ C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\home\ne
   50:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\layout\footer.tsx
-  30:97  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  40:97  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
 
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\layout\mega-menu.tsx
-  121:19  error  Do not use an `<a>` element to navigate to `/directory/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\my-stack-manager.tsx
+   41:17  warning  'session' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  103:14  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+  128:14  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+  158:14  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\review-section.tsx
+  118:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  157:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\search\advanced-search.tsx
+  98:6  warning  React Hook useEffect has a missing dependency: 'performSearch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\search\header-search.tsx
+  106:6  warning  React Hook useCallback has a missing dependency: 'navigateToResult'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  127:9  warning  The attribute aria-expanded is not supported by the role textbox. This role is implicit on the element input           jsx-a11y/role-supports-aria-props
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\search\search-sidebar.tsx
+   17:10  warning  'Badge' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+   20:3   warning  'Search' is defined but never used                                                                                                    @typescript-eslint/no-unused-vars
+   22:3   warning  'Star' is defined but never used                                                                                                      @typescript-eslint/no-unused-vars
+   23:3   warning  'StarOff' is defined but never used                                                                                                   @typescript-eslint/no-unused-vars
+  111:9   warning  'searchParams' is assigned a value but never used                                                                                     @typescript-eslint/no-unused-vars
+  147:6   warning  React Hook useEffect has missing dependencies: 'recordSearch' and 'resultCounts'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  201:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  210:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  239:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  249:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  275:14  warning  'error' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\stripe-card-form.tsx
+  108:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\suggest-tool-dialog.tsx
+  60:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\ui\page-header.tsx
+  1:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\user-menu.tsx
   66:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
@@ -688,9 +412,29 @@ C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\components\user-me
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\hooks\use-toast.ts
   19:7  warning  'actionTypes' is assigned a value but only used as a type  @typescript-eslint/no-unused-vars
 
-C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\auth.ts
-  10:68  warning  'req' is defined but never used           @typescript-eslint/no-unused-vars
-  35:39  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\commission.ts
+  29:7  error  'baseRate' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\cron-jobs.ts
+  518:5   warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-var-requires')
+  519:18  error    A `require()` style import is forbidden                                                                @typescript-eslint/no-require-imports
+  553:12  warning  'error' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\notifications.ts
+  901:21  error  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+  910:3   error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  911:64  error  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\partner-auth.ts
+  19:44  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\affiliate\payments.ts
+  54:18  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\api-auth-middleware.ts
+  236:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  236:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  241:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\cache.ts
   15:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
@@ -699,12 +443,47 @@ C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\cache.ts
   83:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   83:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
 
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\elasticsearch\client.ts
+  39:16  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\elasticsearch\indexing.ts
+  9:10  warning  'analysisSettings' is defined but never used  @typescript-eslint/no-unused-vars
+  9:28  warning  'indexMappings' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\external-stats.ts
+  150:44  warning  'packageName' is defined but never used  @typescript-eslint/no-unused-vars
+
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\manual-tests.ts
   118:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\profile-tests.ts
+  22:15  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\search.ts
+  14:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\seo\schema.ts
+  17:11  warning  'SchemaBase' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\stripe.ts
+  4:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\test-utils.ts
   37:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   37:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\lib\webhook-dispatcher.ts
+    2:36  warning  'parseEvents' is defined but never used   @typescript-eslint/no-unused-vars
+   10:12  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  136:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  158:63  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  191:23  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  192:23  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  195:27  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  196:27  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  199:23  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  200:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  202:31  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
 
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\scripts\test-runner.js
    17:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
@@ -713,5 +492,6 @@ C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\scripts\test-runne
 C:\Users\omare\OneDrive\Desktop\Projects\bioinformaticsHub.io\types\next-auth.d.ts
   2:10  warning  'JWT' is defined but never used  @typescript-eslint/no-unused-vars
 
-Γ£û 83 problems (50 errors, 33 warnings)
+Γ£û 254 problems (85 errors, 169 warnings)
+  1 error and 2 warnings potentially fixable with the `--fix` option.
 

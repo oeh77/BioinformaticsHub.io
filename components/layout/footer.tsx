@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { AdSlot } from "@/components/ads";
 
 export function Footer() {
   const pathname = usePathname();
@@ -14,10 +16,28 @@ export function Footer() {
       isAdminPage && "md:ml-64"
     )}>
       <div className="container mx-auto px-4 py-12">
+        {/* Footer Ad Placement */}
+        {!isAdminPage && (
+          <div className="mb-8 flex justify-center">
+            <AdSlot 
+              placementId="footer" 
+              pageType="global"
+              density="medium"
+            />
+          </div>
+        )}
+        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link href="/" className="font-bold text-xl tracking-tight">
-              BioHub<span className="text-primary">.io</span>
+            <Link href="/" className="flex items-center gap-3 font-bold text-2xl tracking-tight">
+              <Image
+                src="/icon.png"
+                alt="BioinformaticsHub.io logo"
+                width={56}
+                height={56}
+                className="w-14 h-14"
+              />
+              <span>BioinformaticsHub<span className="text-primary">.io</span></span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               The premier destination for bioinformatics tools, learning resources, and community insights.
@@ -37,7 +57,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/resources/beginner-guide" className="hover:text-primary">Beginner's Guide</Link></li>
+              <li><Link href="/resources/beginner-guide" className="hover:text-primary">Beginner&apos;s Guide</Link></li>
               <li><Link href="/resources/paths" className="hover:text-primary">Learning Paths</Link></li>
               <li><Link href="/resources/glossary" className="hover:text-primary">Glossary</Link></li>
               <li><Link href="/newsletter" className="hover:text-primary">Newsletter</Link></li>
@@ -67,3 +87,4 @@ export function Footer() {
     </footer>
   );
 }
+

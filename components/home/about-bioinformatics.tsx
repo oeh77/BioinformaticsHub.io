@@ -9,7 +9,7 @@ export function AboutBioinformatics() {
           Understanding Bioinformatics
         </span>
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          The Science of Decoding Life's Blueprint
+          The Science of Decoding Life&apos;s Blueprint
         </h2>
         <p className="text-xl text-muted-foreground leading-relaxed mb-8">
           Bioinformatics sits at the intersection of biology, computer science, and mathematics, 
@@ -127,7 +127,7 @@ export function AboutBioinformatics() {
                 Organizations across pharmaceuticals, healthcare, agriculture, and biotechnology are 
                 desperately seeking professionals who can bridge the gap between wet-lab biology and 
                 computational analysis. With programming skills in Python and R, combined with biological 
-                knowledge, you'll be positioned at the forefront of scientific innovation.
+                knowledge, you&apos;ll be positioned at the forefront of scientific innovation.
               </p>
               <p className="leading-relaxed">
                 Modern bioinformatics is no longer confined to academia. Companies like Illumina, 
