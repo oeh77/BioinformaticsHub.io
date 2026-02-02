@@ -86,6 +86,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google AdSense Account Verification */}
+        <meta name="google-adsense-account" content="ca-pub-3962865099022579" />
         {/* Google Consent Mode v2 - Must load before other scripts */}
         <script
           dangerouslySetInnerHTML={{
