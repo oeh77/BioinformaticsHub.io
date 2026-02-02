@@ -99,6 +99,7 @@ const navSections: NavSection[] = [
       { href: "/admin/menus", label: "Menus", icon: Menu },
       { href: "/admin/seo", label: "SEO", icon: Globe },
       { href: "/admin/monetization", label: "Monetization", icon: DollarSign },
+      { href: "/admin/adsense", label: "AdSense", icon: DollarSign },
       { href: "/admin/settings", label: "Settings", icon: Settings },
       { href: "/admin/integrations", label: "Integrations", icon: Puzzle },
       { href: "/admin/api-keys", label: "API Keys", icon: Key },
